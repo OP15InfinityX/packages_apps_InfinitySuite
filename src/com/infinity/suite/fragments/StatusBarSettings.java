@@ -277,6 +277,12 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         Settings.System.putIntForUser(resolver,
                 Settings.System.STATUSBAR_EXTRA_PADDING_END, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
+                "statusbar_expanded_extra_padding_start", 0, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                "statusbar_expanded_extra_padding_top", 0, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                "statusbar_expanded_extra_padding_end", 0, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
                 Settings.System.STATUSBAR_NOTIF_COUNT, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, 0, UserHandle.USER_CURRENT);

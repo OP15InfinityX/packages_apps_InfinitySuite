@@ -961,6 +961,10 @@
     <string name="statusbar_extra_padding_start_title">Start padding</string>
     <string name="statusbar_extra_padding_top_title">Top padding</string>
     <string name="statusbar_extra_padding_end_title">End padding</string>
+    <string name="statusbar_expanded_extra_padding_category">Expanded extra padding</string>
+    <string name="statusbar_expanded_extra_padding_start_title">Expanded start padding</string>
+    <string name="statusbar_expanded_extra_padding_top_title">Expanded top padding</string>
+    <string name="statusbar_expanded_extra_padding_end_title">Expanded end padding</string>
 
     <string name="wifi_per_connection_random_mac_addr">Use per-connection randomized MAC (default)</string>
     <string name="wifi_per_network_random_mac_addr">Use per-network randomized MAC</string>
