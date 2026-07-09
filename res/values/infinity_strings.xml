@@ -52,6 +52,8 @@
     <string name="aod_low_brightness_summary">Brightness used when the AOD sensor reports low light</string>
     <string name="aod_high_brightness_title">Bright-light brightness</string>
     <string name="aod_high_brightness_summary">Brightness used when the AOD sensor reports bright light</string>
+    <string name="aod_pickup_brightness_boost_title">Boost on pickup</string>
+    <string name="aod_pickup_brightness_boost_summary">Use bright-light brightness for 20 seconds after pickup in low light</string>
 
     <!-- Sub Categories -->
     <string name="general_category">General</string>
