@@ -55,6 +55,30 @@
         android:dependency="doze_peek"
         android:summary="%s" />
 
+    <PreferenceCategory
+        android:key="aod_brightness_category"
+        android:title="@string/aod_brightness_category_title">
+
+        <com.infinity.support.preferences.SystemSettingSeekBarPreference
+            android:key="aod_low_brightness"
+            android:title="@string/aod_low_brightness_title"
+            android:summary="@string/aod_low_brightness_summary"
+            android:defaultValue="8"
+            android:max="255"
+            settings:min="1"
+            settings:interval="1" />
+
+        <com.infinity.support.preferences.SystemSettingSeekBarPreference
+            android:key="aod_high_brightness"
+            android:title="@string/aod_high_brightness_title"
+            android:summary="@string/aod_high_brightness_summary"
+            android:defaultValue="60"
+            android:max="255"
+            settings:min="1"
+            settings:interval="1" />
+
+    </PreferenceCategory>
+
     <lineageos.preference.RemotePreference
         android:key="doze_device_settings"
         android:title="@string/doze_additional_settings_title"

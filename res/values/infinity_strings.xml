@@ -47,6 +47,11 @@
     <string name="notifications_title">Notifications</string>
     <string name="ambient_text_category_title">AOD Style</string>
     <string name="monet_title">Monet settings</string>
+    <string name="aod_brightness_category_title">AOD brightness</string>
+    <string name="aod_low_brightness_title">Low-light brightness</string>
+    <string name="aod_low_brightness_summary">Brightness used when the AOD sensor reports low light</string>
+    <string name="aod_high_brightness_title">Bright-light brightness</string>
+    <string name="aod_high_brightness_summary">Brightness used when the AOD sensor reports bright light</string>
 
     <!-- Sub Categories -->
     <string name="general_category">General</string>
