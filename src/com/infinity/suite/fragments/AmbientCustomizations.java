@@ -49,6 +49,7 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
     private static final String KEY_DOZE_ALWAYS_ON = "doze_always_on";
     private static final String KEY_DOZE_ALWAYS_ON_SCHEDULE = "always_on_display_schedule";
     private static final String KEY_DOZE_ON_CHARGE = "doze_on_charge";
+    private static final String KEY_AOD_BATTERY_INFO = "aod_battery_info";
     private static final String KEY_PULSE_ON_NEW_TRACKS = "pulse_on_new_tracks";
 
     private SwitchPreferenceCompat mDozeEnabledPreference;
@@ -57,6 +58,7 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
     private SwitchPreferenceCompat mPulseOnNewTracksPreference;
 
     private Preference mDozeAlwaysOnSchedulePreference;
+    private Preference mAodBatteryInfoPreference;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,6 +74,7 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
         mDozeAlwaysOnPreference = (SwitchPreferenceCompat) findPreference(KEY_DOZE_ALWAYS_ON);
         mDozeAlwaysOnSchedulePreference = findPreference(KEY_DOZE_ALWAYS_ON_SCHEDULE);
         mDozeOnChargePreference = (SwitchPreferenceCompat) findPreference(KEY_DOZE_ON_CHARGE);
+        mAodBatteryInfoPreference = findPreference(KEY_AOD_BATTERY_INFO);
         mPulseOnNewTracksPreference = (SwitchPreferenceCompat) findPreference(KEY_PULSE_ON_NEW_TRACKS);
 
         // Hides always on toggle if device doesn't support it (based on config_dozeAlwaysOnDisplayAvailable overlay)
@@ -79,6 +82,7 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
             getPreferenceScreen().removePreference(mDozeAlwaysOnPreference);
             getPreferenceScreen().removePreference(mDozeAlwaysOnSchedulePreference);
             getPreferenceScreen().removePreference(mDozeOnChargePreference);
+            getPreferenceScreen().removePreference(mAodBatteryInfoPreference);
         } else {
             mDozeAlwaysOnPreference.setChecked(Utils.isDozeAlwaysOnEnabled(context));
             mDozeAlwaysOnPreference.setOnPreferenceChangeListener(this);
@@ -126,6 +130,8 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
                 "aod_high_brightness", 60, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 "aod_pickup_brightness_boost", 0, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.AOD_BATTERY_INFO, 1, UserHandle.USER_CURRENT);
         EdgeLightSettings.Companion.reset(mContext);
     }
 
@@ -165,6 +171,7 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
                         keys.add(KEY_DOZE_ALWAYS_ON);
                         keys.add(KEY_DOZE_ALWAYS_ON_SCHEDULE);
                         keys.add(KEY_DOZE_ON_CHARGE);
+                        keys.add(KEY_AOD_BATTERY_INFO);
                     }
 
                     return keys;
