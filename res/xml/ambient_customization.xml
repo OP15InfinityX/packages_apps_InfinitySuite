@@ -40,6 +40,12 @@
         android:title="@string/doze_on_charge_title"
         android:summary="@string/doze_on_charge_summary" />
 
+    <com.infinity.support.preferences.SystemSettingSwitchPreference
+        android:key="aod_battery_info"
+        android:title="@string/aod_battery_info_title"
+        android:summary="@string/aod_battery_info_summary"
+        android:defaultValue="true" />
+
     <com.infinity.support.preferences.SecureSettingSwitchPreference
         android:key="doze_peek"
         android:title="@string/doze_peek_title"

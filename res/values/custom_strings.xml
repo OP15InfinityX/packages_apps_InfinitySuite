@@ -912,6 +912,8 @@
     <!-- Doze on charge -->
     <string name="doze_on_charge_title">Always show when charging</string>
     <string name="doze_on_charge_summary">Display device is charging</string>
+    <string name="aod_battery_info_title">Battery information</string>
+    <string name="aod_battery_info_summary">Show battery level and charging information on the always-on display</string>
 
     <!-- Radio Info -->
     <string name="radio_info_title">Radio info</string>
