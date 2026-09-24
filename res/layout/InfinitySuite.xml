@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:scrollbars="none"
+    android:overScrollMode="always">
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <com.google.android.material.card.MaterialCardView
+	        app:cardElevation="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+		app:cardBackgroundColor="@android:color/transparent">
+		
+		<LinearLayout
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent" >
+                    
+                    <LinearLayout
+			    android:id="@+id/monetsettings_card"
+			    android:layout_width="match_parent"
+			    android:layout_height="120dp"
+			    android:layout_marginTop="0dp"
+			    android:layout_marginBottom="5dp"
+			    android:background="@drawable/rect3"
+			    android:orientation="vertical"
+			    android:gravity="center">
+
+			    <TextView
+				android:id="@+id/textView"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_marginBottom="10dp"
+				android:textSize="15sp"
+				android:text="@string/text_monet_color"
+				android:textColor="?android:textColorSecondary"
+				android:gravity="center" />
+
+			    <LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center">
+				<View
+				    android:layout_width="40dp"
+				    android:layout_height="40dp"
+				    android:background="@drawable/circle4"
+				    android:layout_marginEnd="-20dp" />
+				<View
+				    android:layout_width="40dp"
+				    android:layout_height="40dp"
+				    android:background="@drawable/circle3"
+				    android:layout_marginEnd="-20dp" />
+				<View
+				    android:layout_width="40dp"
+				    android:layout_height="40dp"
+				    android:background="@drawable/circle2"
+				    android:layout_marginEnd="-20dp" />
+				<View
+				    android:layout_width="40dp"
+				    android:layout_height="40dp"
+				    android:background="@drawable/circle1" />
+			    </LinearLayout>
+			</LinearLayout>
+		            		   
+                        <LinearLayout			    
+			    android:layout_width="match_parent"
+			    android:layout_height="200dp"
+			    android:layout_marginTop="5dp"
+			    android:layout_marginBottom="0dp"
+			    android:background="@drawable/rect3"
+			    android:orientation="vertical">
+			    
+			    <com.google.android.material.card.MaterialCardView
+			        android:id="@+id/customization_picker_button"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_marginTop="12dp"
+				android:layout_marginLeft="12dp"
+				android:layout_marginRight="12dp"
+				android:paddingBottom="6dp"
+				android:layout_weight="1"
+				android:orientation="horizontal"
+				android:clickable="true"
+				android:focusable="true"
+                                android:onClick="openCustomizationPickerActivity"
+				app:cardCornerRadius="20dp"
+                                app:cardElevation="0dp">
+                                
+                                <FrameLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent">
+				
+				    <com.infinity.suite.AnimateWallpaperView
+					  android:layout_width="match_parent"
+					  android:layout_height="match_parent"
+					  android:scaleType="centerCrop"
+					  android:elevation="0dp"
+					  android:gravity="center"
+					  android:orientation="vertical" />
+					  
+			            <TextView
+					  android:layout_width="wrap_content"
+					  android:layout_height="wrap_content"
+					  android:layout_gravity="center"
+					  android:text="@string/text_wallpapers"
+					  android:textColor="@*android:color/system_accent1_100"
+					  android:textSize="16sp"
+					  android:textStyle="bold" />
+		                </FrameLayout>
+			    </com.google.android.material.card.MaterialCardView>			    
+			    <LinearLayout
+			        android:id="@+id/theme_card"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1"
+				android:layout_marginTop="6dp"
+				android:layout_marginLeft="12dp"
+				android:layout_marginRight="12dp"
+				android:layout_marginBottom="12dp"
+				android:orientation="vertical"
+				android:background="@drawable/rect2">
+				    <LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:gravity="center">
+
+					<TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:textColor="?android:textColorSecondary"
+					    android:text="@string/text_theme_packs"
+					    android:textSize="16sp"
+					    android:padding="4dp"
+					    android:gravity="center"/>
+				    </LinearLayout>
+				    <LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1"
+					android:padding="4dp"
+					android:orientation="horizontal"
+					android:gravity="center">
+					<LinearLayout
+					    android:layout_width="0dp"
+					    android:layout_height="match_parent"
+					    android:layout_weight="1"
+				            android:layout_marginLeft="10dp"
+				            android:layout_marginRight="5dp"
+				            android:layout_marginBottom="5dp"
+					    android:gravity="center"
+					    android:background="@drawable/rect4">
+					    
+					    <ImageView
+						android:layout_width="32dp"
+						android:layout_height="32dp"
+						android:src="@drawable/animate"
+						android:layout_gravity="center"
+						android:padding="6dp" />
+					</LinearLayout>
+					<LinearLayout
+					    android:layout_width="0dp"
+					    android:layout_height="match_parent"
+					    android:layout_weight="1"
+					    android:layout_marginLeft="5dp"
+				            android:layout_marginRight="10dp"
+				            android:layout_marginBottom="5dp"
+					    android:gravity="center"
+					    android:background="@drawable/rect5">
+					    
+					    <TextView
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:text="Aa"
+						android:textSize="16sp"
+						android:textColor="#000000"
+						android:gravity="center"
+						android:padding="6dp" />
+				</LinearLayout>
+		           </LinearLayout>
+		       </LinearLayout>			
+		   </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                app:cardElevation="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"                
+		app:cardBackgroundColor="@android:color/transparent">
+
+                <LinearLayout
+                    android:gravity="center_vertical|center_horizontal|center"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+        
+        		<com.google.android.material.card.MaterialCardView
+        	            android:layout_width="match_parent"
+        	            android:layout_height="330dp"
+        	            android:layout_weight="1"
+        	            app:cardCornerRadius="28dp"
+        	            app:cardElevation="0dp" >
+                    	
+        	            <com.android.settings.WallpaperBlurView
+        	                android:id="@+id/lockscreensettings_card"
+        	                android:layout_width="match_parent"
+        	                android:layout_height="match_parent"
+        	                android:scaleType="centerCrop"
+        	                android:elevation="0dp"
+        	                android:gravity="center"
+        	                android:orientation="vertical" />
+        	                
+        	            <RelativeLayout
+				android:id="@+id/themes_clock_frame"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center">
+				
+				<TextView
+				    android:id="@+id/lockscreen_title"
+				    android:textSize="15sp"
+				    android:layout_above="@+id/lockscreen_clock_preview"
+				    android:textColor="@*android:color/system_accent1_100"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:textStyle="bold"
+				    android:layout_marginBottom="24dp"
+				    android:text="@string/text_lockscreen"
+				    android:layout_centerHorizontal="true"  />
+
+				<TextClock
+				    android:id="@+id/lockscreen_clock_preview"
+				    android:textSize="60sp"
+				    android:textColor="@*android:color/system_accent1_100"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:fontFamily="google-sans-medium"
+				    android:textStyle="bold"
+				    android:format12Hour="hh\nmm"
+				    android:format24Hour="hh\nmm"
+				    android:textFontWeight="700"
+                    android:textAlignment="center"
+				    android:layout_centerHorizontal="true" />
+
+				<ImageView
+				    android:id="@+id/lock_icon"
+				    android:layout_width="18dp"
+				    android:layout_height="18dp"
+				    android:layout_marginTop="24dp"
+				    android:src="@drawable/ic_lock"
+				    android:scaleType="fitCenter"
+				    android:adjustViewBounds="true"
+				    android:tint="#FFFFFFFF"
+				    android:layout_below="@+id/lockscreen_clock_preview"
+				    android:layout_centerHorizontal="true" 
+				    android:layout_marginStart="24dp" />
+			    </RelativeLayout>
+        	       </com.google.android.material.card.MaterialCardView>       	      
+                  </LinearLayout>
+             </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="90dp">
+            
+            <LinearLayout
+                android:id="@+id/statusbarsettings_card"
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:orientation="horizontal"
+		android:layout_marginTop="5dp"
+        	android:layout_marginBottom="5dp"
+        	android:layout_marginEnd="5dp"
+		android:background="@drawable/rect3">
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:gravity="center">
+				
+			<TextView
+		            android:id="@+id/textView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textSize="15sp"
+			    android:text="@string/text_statusbar"
+			    android:textColor="?android:textColorSecondary"/>
+                </LinearLayout>
+            </LinearLayout> 
+            <LinearLayout
+                android:id="@+id/quicksettings_card"
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:orientation="horizontal"
+		android:layout_marginTop="5dp"
+        	android:layout_marginBottom="5dp"
+        	android:layout_marginStart="5dp"
+		android:background="@drawable/rect3">
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:gravity="center">
+				
+			<TextView
+		            android:id="@+id/textView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textSize="15sp"
+			    android:text="@string/text_qs_panel"
+			    android:textColor="?android:textColorSecondary"/>
+                </LinearLayout>
+	    </LinearLayout> 
+        </LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/aodsettings_card"
+	    android:layout_width="match_parent"
+	    android:layout_height="90dp"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginBottom="5dp"
+	    android:orientation="horizontal"
+	    android:gravity="center_vertical"
+	    android:background="@drawable/rect7"
+	    android:weightSum="2">
+
+	    <LinearLayout
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="1.4"
+		android:gravity="center">
+
+		<TextView
+		    android:id="@+id/text_view"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/text_aod_customization"
+		    android:textColor="?android:textColorSecondary"
+		    android:gravity="center"/>
+	    </LinearLayout>
+
+	    <com.google.android.material.card.MaterialCardView
+		android:id="@+id/card_view"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="0.6"
+		android:layout_margin="18dp"
+		app:cardCornerRadius="20dp"
+		app:cardBackgroundColor="#000000">
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="vertical"
+		    android:gravity="center">
+		        
+		    <TextClock
+		        android:id="@+id/card_clock"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:format12Hour="h:mm"
+		        android:textSize="20sp"
+		        android:gravity="center"
+		        android:textColor="#FFFFFF"
+		        android:padding="10dp" />
+		</LinearLayout>
+	    </com.google.android.material.card.MaterialCardView>
+	</LinearLayout>
+        
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="120.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:weightSum="3">
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/rect6"
+                android:layout_width="115.0dip"
+                android:layout_height="115.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginEnd="16.0dip">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/buttonsettings_card"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:layout_marginEnd="4.0dip">
+                <ImageButton
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:src="@drawable/ic_button"
+                    android:scaleType="centerCrop" />
+                <TextView
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="12.0sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_buttons" />
+            </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/rect6"
+                android:layout_width="115.0dip"
+                android:layout_height="115.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginEnd="10.0dip">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/powersettings_card"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:layout_marginEnd="4.0dip">
+                <ImageButton
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:src="@drawable/ic_powermenu"
+                    android:scaleType="centerCrop" />
+                <TextView
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="12.0sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_powermenu" />
+            </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/rect6"
+                android:layout_width="115.0dip"
+                android:layout_height="115.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginStart="5.0dip">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/notificationsettings_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:src="@drawable/ic_notification"
+                    android:scaleType="centerCrop" />
+                <TextView
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="12.0sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_notification" />
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="120.0dip"
+            android:weightSum="3"
+            android:layout_marginBottom="10.0dip">
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/rect6"
+                android:layout_width="115.0dip"
+                android:layout_height="115.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginEnd="16.0dip">
+		    <LinearLayout
+		        android:gravity="center"
+		        android:orientation="vertical"
+		        android:id="@+id/navigationsettings_card"
+		        android:layout_width="0.0dip"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1.0"
+		        android:layout_marginEnd="4.0dip">
+		        <ImageButton
+		            android:gravity="center"
+		            android:layout_gravity="center"
+		            android:background="@android:color/transparent"
+		            android:clickable="false"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="3.0dip"
+		            android:layout_marginBottom="10.0dip"
+		            android:src="@drawable/ic_navigation"
+		            android:scaleType="centerCrop" />
+		        <TextView
+		            android:gravity="center"
+		            android:layout_gravity="center"
+		            android:textSize="12.0sp"
+		            android:textColor="?android:textColorSecondary"
+		            android:clickable="false"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/text_navigation" />
+		    </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/rect6"
+                android:layout_width="115.0dip"
+                android:layout_height="115.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginEnd="10.0dip">
+		    <LinearLayout
+		        android:gravity="center"
+		        android:orientation="vertical"
+		        android:id="@+id/miscsettings_card"
+		        android:layout_width="0.0dip"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1.0"
+		        android:layout_marginEnd="4.0dip">
+		        <ImageButton
+		            android:gravity="center"
+		            android:layout_gravity="center"
+		            android:background="@android:color/transparent"
+		            android:clickable="false"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="3.0dip"
+		            android:layout_marginBottom="10.0dip"
+		            android:src="@drawable/ic_misc"
+		            android:scaleType="centerCrop" />
+		        <TextView
+		            android:gravity="center"
+		            android:layout_gravity="center"
+		            android:textSize="12.0sp"
+		            android:textColor="?android:textColorSecondary"
+		            android:clickable="false"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/text_miscellaneous" />
+            	</LinearLayout>
+              </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/rect6"
+                android:layout_width="115.0dip"
+                android:layout_height="115.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginStart="5.0dip">
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/teaminfo_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+		        <ImageButton
+		            android:gravity="center"
+		            android:layout_gravity="center"
+		            android:background="@android:color/transparent"
+		            android:clickable="false"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="3.0dip"
+		            android:layout_marginBottom="10.0dip"
+		            android:src="@drawable/ic_infinity_symbol"
+		            android:scaleType="centerCrop" />
+		        <TextView
+		            android:gravity="center"
+		            android:layout_gravity="center"
+		            android:textSize="12.0sp"
+		            android:textColor="?android:textColorSecondary"
+		            android:clickable="false"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/text_team" />
+            	</LinearLayout>
+            </LinearLayout>
+        </LinearLayout>	   
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024-25 Project Infinity X
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:orientation="vertical"
+            android:background="@drawable/rect3"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/preview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ProductSans-Bold"
+                android:text="Preview"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="?android:attr/textColorSecondary"
+                    android:tint="?android:attr/textColorSecondary"
+                    android:layout_marginHorizontal="22dp"/>
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="?android:attr/textColorSecondary"
+                    android:tint="?android:attr/textColorSecondary"
+                    android:layout_marginHorizontal="22dp"/>
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:backgroundTint="?android:attr/textColorSecondary"
+                    android:tint="?android:attr/textColorSecondary"
+                    android:layout_marginHorizontal="22dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp"/>
+
+    <Button
+        android:id="@+id/apply_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/ProductSans-Bold"
+        android:background="@drawable/button_background"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="40dp"
+        android:layout_gravity="center_horizontal"/>   
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2024 Project Infinity X
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/themes_title">
+    
+    <!-- Themes -->
+    <Preference
+        android:key="custom_system_theme"
+        android:title="@string/custom_system_theme_title"
+        android:summary="@string/custom_system_theme_summary">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.axion.axthemestore"
+            android:targetClass="com.android.axion.axthemestore.MainActivity" />
+    </Preference>
+
+    <!-- Settings Icons-->
+    <Preference
+        android:key="settings_icon"
+        android:title="@string/settings_icon_title"
+        android:summary="@string/settings_icon_summary"
+        android:fragment="com.infinity.suite.fragments.SettingIcons" />
+
+        <!-- System Animation styles  -->
+        <com.infinity.support.preferences.SystemSettingListPreference
+            android:key="system_animation_style"
+            android:title="@string/system_animation_style_title"
+            android:dialogTitle="@string/system_animation_style_title"
+            android:entries="@array/system_animation_styles_entries"
+            android:entryValues="@array/system_animation_styles_values"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+    <!-- Wallpaper Settings -->
+    <Preference
+        android:key="wallpaper_settings"
+        android:title="@string/wallpaper_settings_title"
+        android:summary="@string/wallpaper_settings_summary"
+        android:fragment="com.infinity.suite.fragments.Wallpaper" />
+
+    <!-- Gradient Customization -->
+    <Preference
+        android:key="gradient_settings"
+        android:title="@string/gradient_settings_title"
+        android:summary="@string/gradient_settings_summary"
+        android:fragment="com.infinity.suite.fragments.GradientSettings" />
+
+        <!-- Charging animation -->
+        <Preference
+            android:key="charging_animation_settings"
+            android:title="@string/charging_effects_title"
+            android:summary="@string/charging_effects_summary"
+            android:fragment="com.infinity.suite.fragments.ChargingAnimationSettings" />
+
+    <!-- Font style -->
+    <Preference
+        android:key="android.theme.customization.fonts"
+        android:title="@string/theme_customization_font_title"
+        android:summary="@string/theme_customization_font_summary"
+        android:fragment="com.infinity.suite.fragments.FontStyle"/>
+
+    <!-- Emoji Style -->
+    <com.infinity.support.preferences.SystemSettingListPreference
+        android:key="emoji_style"
+        android:title="@string/emoji_style_title"
+        android:summary="%s"
+        android:entries="@array/emoji_style_entries"
+        android:entryValues="@array/emoji_style_values"
+        android:defaultValue="android" />
+
+    <!-- Navbar Style -->
+    <Preference
+        android:key="android.theme.customization.navbar"
+        android:title="@string/theme_customization_navbar_title"
+        android:summary="@string/theme_customization_navbar_summary"
+        android:fragment="com.infinity.suite.fragments.NavbarStyles"/>
+
+</PreferenceScreen>
