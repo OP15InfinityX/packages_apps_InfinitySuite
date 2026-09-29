@@ -21,6 +21,12 @@
         android:summary="@string/dw_wallpaper_enabled_summary"
         android:defaultValue="false" />
     <Preference
+        android:key="depth_wallpaper_generate_subject"
+        android:dependency="depth_wallpaper_enabled"
+        android:title="@string/depth_wallpaper_generate_subject_title"
+        android:summary="@string/depth_wallpaper_generate_subject_summary"
+        android:persistent="false" />
+    <Preference
         android:key="depth_wallpaper_subject_image_uri"
         android:dependency="depth_wallpaper_enabled"
         android:title="@string/dw_file_header_select_title"

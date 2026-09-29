@@ -60,7 +60,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String KEY_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
     private static final String KEY_BRIGHTNESS_SLIDER_POSITION = "qs_brightness_slider_position";
     private static final String KEY_BRIGHTNESS_SLIDER_HAPTIC = "qs_brightness_slider_haptic";
-    private static final String KEY_BRIGHTNESS_SLIDER_STYLE = "qs_brightness_slider_style";
     private static final String KEY_BRIGHTNESS_SLIDER_SHAPE = "qs_brightness_slider_shape";
     private static final String KEY_SHOW_AUTO_BRIGHTNESS = "qs_show_auto_brightness";
     private static final String KEY_QS_COMPACT_MEDIA_PLAYER = "qs_compact_media_player_mode";
@@ -90,7 +89,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private ListPreference mShowBrightnessSlider;
     private ListPreference mBrightnessSliderPosition;
     private SwitchPreferenceCompat mBrightnessSliderHaptic;
-    private SystemSettingSwitchPreference mBrightnessSliderStyle;
     private SystemSettingListPreference mBrightnessSliderShape;
     private SwitchPreferenceCompat mShowAutoBrightness;
     private SwitchPreferenceCompat mQsCompactMediaPlayer;
@@ -124,12 +122,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mBrightnessSliderPosition = findPreference(KEY_BRIGHTNESS_SLIDER_POSITION);
         mBrightnessSliderPosition.setEnabled(showSlider);
 
-        mBrightnessSliderStyle = findPreference(KEY_BRIGHTNESS_SLIDER_STYLE);
         mBrightnessSliderShape = findPreference(KEY_BRIGHTNESS_SLIDER_SHAPE);
-        if (mBrightnessSliderStyle != null) {
-            mBrightnessSliderStyle.setOnPreferenceChangeListener(this);
-            updateBrightnessSliderStyleDependencies();
-        }
 
         mBrightnessSliderHaptic = findPreference(KEY_BRIGHTNESS_SLIDER_HAPTIC);
         mBrightnessSliderHaptic.setEnabled(showSlider);
@@ -165,8 +158,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         } else {
             prefScreen.removePreference(mShowAutoBrightness);
         }
-
-        updateBrightnessSliderStyleDependencies();
 
         mQsCompactMediaPlayer = findPreference(KEY_QS_COMPACT_MEDIA_PLAYER);
         mQsCompactMediaPlayer.setOnPreferenceChangeListener(this);
@@ -217,26 +208,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         }
         if (mQsTileLabelHide != null) {
             mQsTileLabelHide.setVisible(isClassic);
-        }
-    }
-
-    private void updateBrightnessSliderStyleDependencies() {
-        if (mBrightnessSliderStyle == null) return;
-
-        ContentResolver resolver = getContext().getContentResolver();
-        boolean isSliderStyleEnabled = Settings.System.getInt(resolver,
-                KEY_BRIGHTNESS_SLIDER_STYLE, 0) == 1;
-
-        if (mBrightnessSliderShape != null) {
-            mBrightnessSliderShape.setVisible(!isSliderStyleEnabled);
-        }
-
-        if (mShowAutoBrightness != null) {
-            boolean automaticAvailable = getContext().getResources().getBoolean(
-                    com.android.internal.R.bool.config_automatic_brightness_available);
-            if (automaticAvailable) {
-                mShowAutoBrightness.setVisible(!isSliderStyleEnabled);
-            }
         }
     }
 
@@ -348,7 +319,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         if (preference == mShowBrightnessSlider) {
             int value = Integer.parseInt((String) newValue);
             updateBrightnessSliderState(value > 0);
-            updateBrightnessSliderStyleDependencies();
             return true;
         } else if (preference == mInfinityQsStyle) {
             int previousStyle = getCurrentQsStyle();
@@ -384,10 +354,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         } else if (preference == mDualTargetTileStyle) {
             SystemUtils.showSystemUiRestartDialog(getContext());
             return true;
-        } else if (preference == mBrightnessSliderStyle) {
-            updateBrightnessSliderStyleDependencies();
-            SystemUtils.showSystemUiRestartDialog(getContext());
-            return true;
         } else if (preference == mQsPanelStyle) {
             int value = Integer.parseInt((String) newValue);
             updatePanelStylePrefs(value);
@@ -404,8 +370,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                 Settings.System.QS_BRIGHTNESS_SLIDER_HAPTIC, 1, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.QS_BRIGHTNESS_SLIDER_SHAPE, 0, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
-                KEY_BRIGHTNESS_SLIDER_STYLE, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.QS_BT_SHOW_DIALOG, 1, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
@@ -473,17 +437,9 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                         keys.add(KEY_SHOW_AUTO_BRIGHTNESS);
                     }
 
-                    ContentResolver resolver = context.getContentResolver();
-                    boolean isSliderStyleEnabled = Settings.System.getInt(resolver,
-                            KEY_BRIGHTNESS_SLIDER_STYLE, 0) == 1;
-                    if (isSliderStyleEnabled) {
-                        keys.add(KEY_BRIGHTNESS_SLIDER_SHAPE);
-                        keys.add(KEY_SHOW_AUTO_BRIGHTNESS);
+                    if (!DeviceUtils.hasVibrator(context)) {
+                        keys.add("qs_tile_haptic");
                     }
-
-                                        if (!DeviceUtils.hasVibrator(context)) {
-                                                keys.add("qs_tile_haptic");
-                                        }
 
                     return keys;
                 }

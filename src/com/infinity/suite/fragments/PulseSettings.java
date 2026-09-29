@@ -33,17 +33,12 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.infinity.suite.utils.DeviceUtils;
-import com.infinity.suite.utils.SystemUtils;
 
 
 @SearchIndexable
-public class PulseSettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class PulseSettings extends SettingsPreferenceFragment {
 
     private static final String KEY_PULSE_BASS_HAPTICS = "pulse_bass_haptics";
-    private static final String KEY_AMBIENT_PULSE_ENABLED = "ambient_pulse_enabled";
-
-    private Preference mAmbientPulse;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,19 +51,6 @@ public class PulseSettings extends SettingsPreferenceFragment implements
             getPreferenceScreen().removePreference(findPreference(KEY_PULSE_BASS_HAPTICS));
         }
 
-        mAmbientPulse = findPreference(KEY_AMBIENT_PULSE_ENABLED);
-        if (mAmbientPulse != null) {
-            mAmbientPulse.setOnPreferenceChangeListener(this);
-        }
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mAmbientPulse) {
-            SystemUtils.showSystemUiRestartDialog(getContext());
-            return true;
-        }
-        return false;
     }
 
     public static void reset(Context context) {
@@ -76,7 +58,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         Settings.Secure.putIntForUser(resolver,
                 Settings.Secure.LOCKSCREEN_PULSE_ENABLED, 0, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
-                Settings.Secure.AMBIENT_PULSE_ENABLED, 0, UserHandle.USER_CURRENT);
+                Settings.Secure.AMBIENT_PULSE_ENABLED, 1, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
                 Settings.Secure.PULSE_BAR_COUNT, 32, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,

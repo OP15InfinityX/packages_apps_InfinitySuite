@@ -224,6 +224,11 @@
     <string name="bluetooth_battery_title">Bluetooth battery status</string>
     <string name="bluetooth_battery_summary">Display battery status for the connected bluetooth device, if available</string>
 
+    <!-- Title for the Bluetooth device details preference that chooses which audio codec a paired device is played with. [CHAR LIMIT=40] -->
+    <string name="bluetooth_details_audio_codec_title">Audio codec</string>
+    <!-- Summary shown when the audio codec of a paired device cannot be read or chosen. [CHAR LIMIT=40] -->
+    <string name="bluetooth_details_audio_codec_unavailable">Not available</string>
+    
     <!-- Tap to sleep on status bar -->
     <string name="statusbar_doubletap_sleep_title">Tap to sleep (Statusbar)</string>
     <string name="statusbar_doubletap_sleep_summary">Double-tap on the status bar to put device asleep</string>
@@ -1060,7 +1065,7 @@
     <string name="pulse_settings_title">Pulse Visualizer</string>
     <string name="pulse_settings_summary">Show a bar visualizer on the lock screen while music is playing</string>
     <string name="ambient_pulse_enabled_title">Ambient Pulse</string>
-    <string name="ambient_pulse_enabled_summary">Show visualizer on Ambient Display\nWARNING: Enabling this will cause visualizer to display over lockscreen bottom elements (overlapping)</string>
+    <string name="ambient_pulse_enabled_summary">Show visualizer on Ambient Display</string>
     <string name="pulse_bass_haptics_title">Bass haptics</string>
     <string name="pulse_bass_haptics_none">No subtle vibration on sharp bass spikes</string>
     <string name="pulse_bass_haptics_running">Only when pulse is showing</string>

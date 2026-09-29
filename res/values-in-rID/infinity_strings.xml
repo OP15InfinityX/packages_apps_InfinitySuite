@@ -407,14 +407,10 @@
 <string name="charging_show_on_lockscreen_summary">Tampilkan efek saat layar kunci terlihat</string>
 <string name="charging_show_on_aod_title">Tampilkan di Always-On Display</string>
 <string name="charging_show_on_aod_summary">Tampilkan efek dalam mode ambient</string>
-    <string name="qs_brightness_slider_style_title">Gaya penggeser kecerahan minimal</string>
-    <string name="qs_brightness_slider_style_summary">Aktifkan gaya minimal untuk penggeser kecerahan</string>
     <string name="show_volume_percentage_title">Tampilkan persentase volume</string>
     <string name="show_volume_percentage_summary">Tampilkan persentase volume di panel volume</string>
     <string name="disable_flash_sms_title">Nonaktifkan pesan SMS Flash</string>
     <string name="disable_flash_sms_summary">Matikan pesan SMS flash layar penuh dan terima sebagai pesan biasa</string>
-    <string name="notification_bubble_apps_title">Notifikasi Gelembung</string>
-    <string name="notification_bubble_apps_summary">Luncurkan aplikasi dalam gelembung saat mengklik notifikasinya</string>
     <string name="infinity_qs_style_title">Gaya Panel QS</string>
     <string name="infinity_qs_style_stock">Gaya Standar</string>
     <string name="infinity_qs_style_infinity_x">Gaya Infinity X</string>

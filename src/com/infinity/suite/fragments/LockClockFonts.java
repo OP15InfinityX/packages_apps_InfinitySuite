@@ -56,8 +56,6 @@ import java.util.List;
 
 public class LockClockFonts extends SettingsPreferenceFragment {
 
-    private static final String LOCK_SCREEN_CUSTOM_CLOCK_FACE = "lock_screen_custom_clock_face";
-
     private RecyclerView mRecyclerView;
     private ThemeUtils mThemeUtils;
     private String mCategory = "android.theme.customization.lockscreen_clock_font";
@@ -165,7 +163,7 @@ public class LockClockFonts extends SettingsPreferenceFragment {
         applyButton.setOnClickListener(v -> {
             if (mSelectedPkg != null) {
                 Settings.Secure.putIntForUser(getContext().getContentResolver(),
-                    LOCK_SCREEN_CUSTOM_CLOCK_FACE, 0, UserHandle.USER_CURRENT);
+                    Settings.Secure.LOCK_SCREEN_CUSTOM_CLOCK_FACE, 0, UserHandle.USER_CURRENT);
                 int selectedPosition = mPkgs.indexOf(mSelectedPkg);
                 enableOverlays(selectedPosition);
                 mAppliedPkg = mSelectedPkg;

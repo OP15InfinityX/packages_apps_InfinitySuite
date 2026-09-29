@@ -407,14 +407,10 @@
     <string name="charging_show_on_lockscreen_summary">Отображать эффекты, когда виден экран блокировки</string>
     <string name="charging_show_on_aod_title">Показывать на Always-On Display</string>
     <string name="charging_show_on_aod_summary">Отображать эффекты в Ambient режиме</string>
-    <string name="qs_brightness_slider_style_title">Минималистичный стиль ползунка яркости</string>
-    <string name="qs_brightness_slider_style_summary">Включить минималистичный стиль для ползунка яркости</string>
     <string name="show_volume_percentage_title">Показывать процент громкости</string>
     <string name="show_volume_percentage_summary">Отображать процент громкости в панели громкости</string>
     <string name="disable_flash_sms_title">Отключить Flash SMS события</string>
     <string name="disable_flash_sms_summary">Отключить полноэкранные Flash SMS сообщения и получать их как обычные сообщения</string>
-    <string name="notification_bubble_apps_title">Bubble уведомления</string>
-    <string name="notification_bubble_apps_summary">Запускать приложения в пузырьке (bubble) при нажатии на их уведомления</string>
     <string name="infinity_qs_style_title">Стиль панели QS</string>
     <string name="infinity_qs_style_stock">Стоковый стиль</string>
     <string name="infinity_qs_style_infinity_x">Стиль Infinity X</string>

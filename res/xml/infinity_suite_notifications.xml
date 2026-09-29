@@ -52,13 +52,6 @@
             android:defaultValue="false"
             android:dependency="heads_up_notifications_enabled" />
 
-        <!-- Notification bubble apps -->
-        <!-- <com.infinity.support.preferences.SystemSettingSwitchPreference
-            android:key="notification_bubble_apps"
-            android:title="@string/notification_bubble_apps_title"
-            android:summary="@string/notification_bubble_apps_summary"
-            android:defaultValue="false" /> -->
-
     <com.infinity.support.preferences.SecureSettingSwitchPreference
         android:key="notification_row_transparency"
         android:title="@string/notification_row_transparency_title"
