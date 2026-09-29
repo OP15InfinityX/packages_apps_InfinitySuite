@@ -407,14 +407,10 @@
     <string name="charging_show_on_lockscreen_summary">Kilit ekranı görünürken efektleri göster</string>
     <string name="charging_show_on_aod_title">Her Zaman Açık Ekranda (AOD) göster</string>
     <string name="charging_show_on_aod_summary">Efektleri ortam modunda göster</string>
-    <string name="qs_brightness_slider_style_title">Minimal parlaklık kaydırıcı stili</string>
-    <string name="qs_brightness_slider_style_summary">Parlaklık kaydırıcısı için minimal stili etkinleştir</string>
     <string name="show_volume_percentage_title">Ses yüzdesini göster</string>
     <string name="show_volume_percentage_summary">Ses panelinde ses yüzdesini görüntüle</string>
     <string name="disable_flash_sms_title">Anlık SMS olaylarını devre dışı bırak</string>
     <string name="disable_flash_sms_summary">Tam ekran anlık SMS mesajlarını kapat ve bunun yerine normal mesaj olarak al</string>
-    <string name="notification_bubble_apps_title">Baloncuk Bildirimleri</string>
-    <string name="notification_bubble_apps_summary">Bildirimlerine tıklandığında uygulamaları bir baloncuk içinde başlat</string>
     <string name="infinity_qs_style_title">QS Paneli Stili</string>
     <string name="infinity_qs_style_stock">Stok Stil</string>
     <string name="infinity_qs_style_infinity_x">Infinity X Stili</string>

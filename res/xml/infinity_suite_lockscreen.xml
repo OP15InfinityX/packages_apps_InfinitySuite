@@ -19,15 +19,68 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     xmlns:app="http://schemas.android.com/apk/res-auto">           
 
-     <PreferenceCategory
+    <PreferenceCategory
         android:key="lockscreen_clock_category"
         android:title="@string/qs_clock_title">
 
         <Preference
             android:key="android.theme.customization.lockscreen_clock_font"
+            android:title="@string/custom_clock_style"
+            android:summary="@string/lockscreen_clock_category_summary"
+            android:fragment="com.infinity.suite.fragments.CustomClockPreview" />  
+
+    <com.infinity.support.preferences.SecureSettingListPreference
+        android:key="lock_screen_custom_clock_color_mode"
+        android:title="@string/clock_color_mode_title"
+        android:entries="@array/clock_color_mode_entries"
+        android:entryValues="@array/clock_color_mode_values"
+        android:summary="%s"
+        android:defaultValue="default" />
+
+    <com.infinity.support.colorpicker.ColorPickerPreference
+        android:key="lock_screen_custom_clock_custom_color"
+        android:title="@string/custom_color"
+        android:defaultValue="0xFFFFFFFF" />
+
+    <com.infinity.support.preferences.SecureSettingSeekBarPreference
+        android:key="lock_screen_custom_clock_opacity"
+        android:title="@string/clock_text_opacity_title"
+        android:summary="@string/clock_text_opacity_summary"
+        android:defaultValue="100"
+	    android:max="100"
+        settings:min="10" 
+        settings:units="%" />
+
+    <com.infinity.support.preferences.SecureSettingSeekBarPreference
+        android:key="lock_screen_custom_clock_size_scale"
+        android:title="@string/clock_size_title"
+        android:summary="@string/clock_size_summary"
+        android:defaultValue="100"
+        android:max="150"
+        settings:min="50"
+        settings:units="%" />
+
+    <com.infinity.support.preferences.SecureSettingSeekBarPreference
+        android:key="lock_screen_custom_clock_margin_top"
+        android:title="@string/custom_clock_frame_margin_top_title"
+        android:summary="@string/custom_clock_frame_margin_top_summary"
+        android:defaultValue="15"
+	    android:max="200"
+        settings:min="0" 
+        settings:units="dp" />
+
+        <!-- Lockscreen Clock Font style -->
+        <Preference
+            android:key="android.theme.customization.lockscreen_clock_font"
             android:title="@string/theme_customization_lock_clock_title"
             android:summary="@string/theme_customization_lock_clock_summary"
             android:fragment="com.infinity.suite.fragments.LockClockFonts"/>
+
+        <Preference
+            android:key="lockscreen_widgets"
+            android:title="@string/lockscreen_widgets_title"
+            android:summary="@string/lockscreen_widgets_enabled_summary"
+            android:fragment="com.infinity.suite.fragments.LockScreenWidgets" />
 
     </PreferenceCategory>
 
@@ -74,7 +127,7 @@
             android:fragment="com.infinity.suite.fragments.PulseSettings" />
      </PreferenceCategory>
 
-    <!-- <PreferenceCategory
+    <PreferenceCategory
         android:title="@string/depth_wallpaper_category">
         
         <Preference
@@ -82,7 +135,7 @@
             android:title="@string/dw_wallpaper_enabled_title"
             android:summary="@string/dw_wallpaper_enabled_summary"
             android:fragment="com.infinity.suite.fragments.WallpaperDepth" />
-     </PreferenceCategory> -->
+     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="lockscreen_weather_category"
@@ -93,7 +146,7 @@
             android:title="@string/lockscreen_smartspace_title"
             android:summary="@string/lockscreen_smartspace_summary"
             android:defaultValue="false" />
-        
+
         <Preference
             android:key="weather_settings"
             android:title="@string/weather_settings_title"
@@ -140,7 +193,7 @@
 
     </PreferenceCategory>
 
-     <PreferenceCategory
+    <PreferenceCategory
         android:key="lockscreen_media_bar_category"
         android:title="@string/media_player_category">
 
@@ -167,12 +220,12 @@
             android:summary="@string/ls_media_art_summary"
             android:defaultValue="false" />
 
-        <!-- <com.infinity.support.preferences.SystemSettingSwitchPreference
+        <com.infinity.support.preferences.SystemSettingSwitchPreference
             android:key="ambient_media_art_enabled"
             android:title="@string/ambient_media_art_title"
             android:summary="@string/ambient_media_art_summary"
             android:dependency="ls_media_art_enabled"
-            android:defaultValue="false" /> -->
+            android:defaultValue="false" />
 
         <com.infinity.support.preferences.SystemSettingListPreference
             android:key="ls_media_art_filter"

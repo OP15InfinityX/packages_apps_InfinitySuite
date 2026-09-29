@@ -407,14 +407,10 @@
     <string name="charging_show_on_lockscreen_summary">Exibir efeitos quando a tela de bloqueio estiver visível</string>
     <string name="charging_show_on_aod_title">Mostrar na Tela Sempre Ativa (AOD)</string>
     <string name="charging_show_on_aod_summary">Exibir efeitos no modo ambiente</string>
-    <string name="qs_brightness_slider_style_title">Estilo minimalista do controle de brilho</string>
-    <string name="qs_brightness_slider_style_summary">Ativar estilo minimalista para o controle deslizante de brilho</string>
     <string name="show_volume_percentage_title">Mostrar porcentagem do volume</string>
     <string name="show_volume_percentage_summary">Exibir porcentagem do volume no painel de volume</string>
     <string name="disable_flash_sms_title">Desativar eventos Flash SMS</string>
     <string name="disable_flash_sms_summary">Desligar mensagens Flash SMS de tela cheia e recebê-las como mensagens normais</string>
-    <string name="notification_bubble_apps_title">Notificações em Bolha</string>
-    <string name="notification_bubble_apps_summary">Iniciar aplicativos em uma bolha ao clicar em suas notificações</string>
     <string name="infinity_qs_style_title">Estilo do Painel QS</string>
     <string name="infinity_qs_style_stock">Estilo Original</string>
     <string name="infinity_qs_style_infinity_x">Estilo Infinity X</string>

@@ -407,14 +407,10 @@
     <string name="charging_show_on_lockscreen_summary">锁屏可见时显示特效</string>
     <string name="charging_show_on_aod_title">在 Always-On Display 上显示</string>
     <string name="charging_show_on_aod_summary">在 AOD 模式下显示特效</string>
-    <string name="qs_brightness_slider_style_title">极简亮度滑块样式</string>
-    <string name="qs_brightness_slider_style_summary">为亮度滑块启用极简样式</string>
     <string name="show_volume_percentage_title">显示音量百分比</string>
     <string name="show_volume_percentage_summary">在音量面板中显示音量百分比</string>
     <string name="disable_flash_sms_title">禁用闪信 SMS</string>
     <string name="disable_flash_sms_summary">关闭全屏闪信消息，改为作为普通消息接收</string>
-    <string name="notification_bubble_apps_title">气泡通知</string>
-    <string name="notification_bubble_apps_summary">点击通知时在气泡中启动应用</string>
     <string name="infinity_qs_style_title">快速设置面板样式</string>
     <string name="infinity_qs_style_stock">原生样式</string>
     <string name="infinity_qs_style_infinity_x">Infinity X 样式</string>

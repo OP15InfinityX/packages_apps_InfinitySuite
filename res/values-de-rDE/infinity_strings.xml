@@ -407,14 +407,10 @@
     <string name="charging_show_on_lockscreen_summary">Zeige Effekte an, wenn der Sperrbildschirm sichtbar ist</string>
     <string name="charging_show_on_aod_title">Auf Always-On-Display anzeigen</string>
     <string name="charging_show_on_aod_summary">Zeige Effekte im Ambient Mode an</string>
-    <string name="qs_brightness_slider_style_title">Minimaler Helligkeitsregler-Stil</string>
-    <string name="qs_brightness_slider_style_summary">Aktiviere den minimalen Stil für den Helligkeitsregler</string>
     <string name="show_volume_percentage_title">Lautstärke in Prozent anzeigen</string>
     <string name="show_volume_percentage_summary">Zeige die Lautstärke in Prozent im Lautstärke-Panel an</string>
     <string name="disable_flash_sms_title">Flash-SMS-Ereignisse deaktivieren</string>
     <string name="disable_flash_sms_summary">Schalte vollbildliche Flash-SMS-Nachrichten aus und erhalte sie stattdessen als normale Nachrichten</string>
-    <string name="notification_bubble_apps_title">Benachrichtigungs-Bubbles</string>
-    <string name="notification_bubble_apps_summary">Apps in einer Bubble starten, wenn auf ihre Benachrichtigung geklickt wird</string>
     <string name="infinity_qs_style_title">QS-Panel-Stil</string>
     <string name="infinity_qs_style_stock">Standard-Stil</string>
     <string name="infinity_qs_style_infinity_x">Infinity X-Stil</string>

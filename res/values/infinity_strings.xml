@@ -322,6 +322,11 @@
     <string name="custom_font">Custom font</string>
     <string name="reset">Reset</string>
 
+    <!-- Smartspace -->
+    <string name="lockscreen_smartspace_title">Smartspace</string>
+    <string name="lockscreen_smartspace_summary">Display Google\'s At a Glance on lockscreen</string>
+    <string name="lockscreen_smartspace_disabled_summary">This feature can\'t be enabled while Custom LS Clocks in use.</string>
+
     <!-- Media art QS background -->
     <string name="media_waveform_seekbar_title">Waveform Media Seekbar</string>
     <string name="media_waveform_seekbar_summary">Enable animated waveform effect for media playback progress</string>
@@ -392,14 +397,16 @@
     
     <!-- Depth Wallpaper -->
     <string name="depth_wallpaper_category">Depth Wallpaper</string>
-    <string name="dw_file_header_select_title">Select Depth wallpaper subject</string>
-    <string name="dw_file_header_select_summary">Select depth wallpaper subject image from storage.</string>
+    <string name="depth_wallpaper_generate_subject_title">Generate depth wallpaper subject image</string>
+    <string name="depth_wallpaper_generate_subject_summary">Import your lockscreen wallpaper image here to automatically generate it\'s cutout subject image\nGet the generated subject image from /sdcard/InfinityResources folder and import below to apply to your lockscreen</string>
+    <string name="dw_file_header_select_title">Import Depth wallpaper subject image</string>
+    <string name="dw_file_header_select_summary">Select depth wallpaper subject image from storage</string>
     <string name="quick_settings_header_needs_gallery">You must install a gallery app!</string>
     <string name="dw_wallpaper_enabled_title">Depth wallpaper</string>
-    <string name="dw_wallpaper_enabled_summary">Enable iOS-inspired depth wallpaper. Requires a subject image.</string>
+    <string name="dw_wallpaper_enabled_summary">Enable iOS-inspired depth wallpaper. Requires a subject image</string>
     <string name="dw_wallpaper_opacity_title">Depth wallpaper opacity</string>
     <string name="dw_footer_text">
-        The depth wallpaper feature, inspired by iOS\'s Wallpaper Subject Segmentation, enables overlaying of a subject above the lockscreen clock to show a wallpaper depth effect.\n\nTo setup Depth Wallpaper Feature:\n1. Set a wallpaper with the subject or a background you want the subject to be above of.\n2. Select a subject image to track, this image will be overlaid above the lockscreen clock.\n3. Modify the offsets and opacity according to your needs.
+        The depth wallpaper feature, inspired by iOS\'s Wallpaper Subject Segmentation, enables overlaying of a subject above the lockscreen clock to show a wallpaper depth effect.\n\nTo setup Depth Wallpaper Feature:\n1. Set a lockscreen wallpaper with the subject or a background you want the subject to be above of.\n2. Select a subject image to track, this image will be overlaid above the lockscreen clock.\n3. Modify the opacity according to your needs.
     </string>
 
     <!-- Single Tone QS -->
@@ -522,10 +529,6 @@
     <string name="charging_show_on_aod_title">Show on Always-On Display</string>
     <string name="charging_show_on_aod_summary">Display effects in ambient mode</string>
 
-    <!-- Minimal brightness slider style -->
-    <string name="qs_brightness_slider_style_title">Minimal brightness-slider style</string>
-    <string name="qs_brightness_slider_style_summary">Enable minimal style for brightness slider</string>
-
     <!-- Show volume percentage -->
     <string name="show_volume_percentage_title">Show volume percentage</string>
     <string name="show_volume_percentage_summary">Display volume percentage in volume panel</string>
@@ -533,10 +536,6 @@
     <!-- Flash SMS -->
     <string name="disable_flash_sms_title">Disable Flash SMS events</string>
     <string name="disable_flash_sms_summary">Turn off full-screen flash SMS messages and receive them as regular messages instead</string>
-
-   <!-- Notification bubbles -->
-    <string name="notification_bubble_apps_title">Bubble Notifications</string>
-    <string name="notification_bubble_apps_summary">Launch apps in a bubble when clicking their notifications</string>
 
     <!-- Infinity QS style -->
     <string name="infinity_qs_style_title">QS Panel Style</string>
@@ -638,8 +637,4 @@
     <!-- Lockscreen lyrics -->
     <string name="infinity_bar_lockscreen_media_lyrics_title">Display music lyrics on lockscreen</string>
     <string name="infinity_bar_lockscreen_media_lyrics_summary">Show lyrics of supported playing music on lockscreen and AOD whenever available</string>
-
-    <!-- Smartspace -->
-    <string name="lockscreen_smartspace_title">Smartspace</string>
-    <string name="lockscreen_smartspace_summary">Display Google\'s At a Glance on lockscreen</string>
 </resources>

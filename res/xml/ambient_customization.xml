@@ -63,7 +63,7 @@
             android:action="org.lineageos.settings.device.DOZE_SETTINGS" />
     </lineageos.preference.RemotePreference>
 
-   <!-- <com.infinity.support.preferences.SystemSettingSwitchPreference
+    <com.infinity.support.preferences.SystemSettingSwitchPreference
         android:key="custom_aod_image_enabled"
         android:title="@string/lockscreen_custom_image_enabled_title"
         android:summary="@string/lockscreen_custom_image_summary"
@@ -75,15 +75,15 @@
         android:summary="@string/lockscreen_custom_image_pick_summary"
         android:dependency="custom_aod_image_enabled" />
 
-     <com.infinity.support.preferences.SecureSettingSwitchPreference
+    <com.infinity.support.preferences.SecureSettingSwitchPreference
         android:key="pulse_on_new_tracks"
         android:title="@string/pulse_on_new_tracks_title"
         android:summary="@string/pulse_on_new_tracks_summary" />
 
-     <Preference
+    <Preference
         android:key="edge_light_settings"
         android:title="@string/edge_light_title"
         android:summary="@string/edge_light_summary"
-        android:fragment="com.infinity.suite.fragments.doze.EdgeLightSettings" />  -->
+        android:fragment="com.infinity.suite.fragments.doze.EdgeLightSettings" />
 
 </PreferenceScreen>

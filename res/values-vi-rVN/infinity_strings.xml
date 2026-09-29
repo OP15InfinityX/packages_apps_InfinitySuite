@@ -407,14 +407,10 @@
     <string name="charging_show_on_lockscreen_summary">Hiển thị hiệu ứng khi màn hình khóa hiện ra</string>
     <string name="charging_show_on_aod_title">Hiển thị trên Always-On Display</string>
     <string name="charging_show_on_aod_summary">Hiển thị hiệu ứng ở chế độ môi trường (ambient mode)</string>
-    <string name="qs_brightness_slider_style_title">Kiểu thanh trượt độ sáng tối giản</string>
-    <string name="qs_brightness_slider_style_summary">Bật kiểu tối giản cho thanh trượt độ sáng</string>
     <string name="show_volume_percentage_title">Hiển thị phần trăm âm lượng</string>
     <string name="show_volume_percentage_summary">Hiển thị phần trăm âm lượng trong bảng âm lượng</string>
     <string name="disable_flash_sms_title">Tắt sự kiện Flash SMS</string>
     <string name="disable_flash_sms_summary">Tắt tin nhắn Flash SMS toàn màn hình và nhận chúng dưới dạng tin nhắn thông thường</string>
-    <string name="notification_bubble_apps_title">Thông báo Bubble</string>
-    <string name="notification_bubble_apps_summary">Khởi chạy ứng dụng trong một bubble khi nhấp vào thông báo của chúng</string>
     <string name="infinity_qs_style_title">Kiểu bảng QS</string>
     <string name="infinity_qs_style_stock">Kiểu Gốc</string>
     <string name="infinity_qs_style_infinity_x">Kiểu Infinity X</string>

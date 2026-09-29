@@ -105,10 +105,8 @@ public class PowerMenuSettings extends SettingsPreferenceFragment {
         }
 
         if (!TelephonyUtils.isVoiceCapable(getActivity())) {
-            if (mEmergencyPref != null) {
-                mPowerMenuItemsCategory.removePreference(mEmergencyPref);
-                mEmergencyPref = null;
-            }
+            mPowerMenuItemsCategory.removePreference(mEmergencyPref);
+            mEmergencyPref = null;
         }
     }
 

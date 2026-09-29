@@ -138,6 +138,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment
             updateCustomColorPickerVisibility(colorMode);
         }
 
+        updateSmartspacePreference();
         updateWeatherSettings();
 
         mUdfpsCategory = findPreference(UDFPS_CATEGORY);
@@ -232,6 +233,23 @@ public class LockScreenSettings extends SettingsPreferenceFragment
         PulseSettings.reset(mContext);
     }
 
+    private void updateSmartspacePreference() {
+        if (mSmartspace == null || getContext() == null) return;
+
+        int clockStyle = Settings.Secure.getIntForUser(
+                getContext().getContentResolver(),
+                Settings.Secure.LOCK_SCREEN_CUSTOM_CLOCK_STYLE, 0, UserHandle.USER_CURRENT);
+
+        if (clockStyle != 0) {
+            mSmartspace.setEnabled(false);
+            mSmartspace.setChecked(false);
+            mSmartspace.setSummary(R.string.lockscreen_smartspace_disabled_summary);
+        } else {
+            mSmartspace.setEnabled(true);
+            mSmartspace.setSummary(R.string.lockscreen_smartspace_summary);
+        }
+    }
+
     private void updateWeatherSettings() {
         if (mWeather == null) return;
 
@@ -256,6 +274,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment
     @Override
     public void onResume() {
         super.onResume();
+        updateSmartspacePreference();
         updateWeatherSettings();
         if (mClockColorMode != null) {
             updateCustomColorPickerVisibility(mClockColorMode.getValue());

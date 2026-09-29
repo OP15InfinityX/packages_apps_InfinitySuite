@@ -24,12 +24,12 @@
         android:key="lockscreen_pulse_enabled"
         android:title="@string/enable" />
 
-    <!-- <com.infinity.support.preferences.SecureSettingSwitchPreference
+    <com.infinity.support.preferences.SecureSettingSwitchPreference
         android:key="ambient_pulse_enabled"
         android:title="@string/ambient_pulse_enabled_title"
         android:summary="@string/ambient_pulse_enabled_summary"
-        android:defaultValue="false"
-        android:dependency="lockscreen_pulse_enabled" /> -->
+        android:defaultValue="true"
+        android:dependency="lockscreen_pulse_enabled" />
 
     <com.infinity.support.preferences.SecureSettingListPreference
         android:key="pulse_bass_haptics"

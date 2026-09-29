@@ -18,13 +18,23 @@
 
 package com.infinity.suite.fragments;
 
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.UserHandle;
+import android.provider.MediaStore;
 import android.provider.Settings;
+import android.widget.Toast;
 
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreferenceCompat;
 
@@ -36,8 +46,10 @@ import com.android.settingslib.search.SearchIndexable;
 
 import com.infinity.suite.fragments.doze.EdgeLightSettings;
 import com.infinity.suite.fragments.doze.Utils;
+import com.infinity.suite.utils.ImageUtils;
 
 import java.util.List;
+import java.util.ArrayList;
 
 @SearchIndexable
 public class AmbientCustomizations extends SettingsPreferenceFragment implements
@@ -49,7 +61,9 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
     private static final String KEY_DOZE_ALWAYS_ON = "doze_always_on";
     private static final String KEY_DOZE_ALWAYS_ON_SCHEDULE = "always_on_display_schedule";
     private static final String KEY_DOZE_ON_CHARGE = "doze_on_charge";
+    private static final String KEY_CUSTOM_AOD_IMAGE = "lockscreen_custom_image";
     private static final String KEY_PULSE_ON_NEW_TRACKS = "pulse_on_new_tracks";
+    private static final int CUSTOM_IMAGE_REQUEST_CODE = 1001;
 
     private SwitchPreferenceCompat mDozeEnabledPreference;
     private SwitchPreferenceCompat mDozeAlwaysOnPreference;
@@ -57,6 +71,7 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
     private SwitchPreferenceCompat mPulseOnNewTracksPreference;
 
     private Preference mDozeAlwaysOnSchedulePreference;
+    private Preference mCustomImagePreference;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,6 +87,7 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
         mDozeAlwaysOnPreference = (SwitchPreferenceCompat) findPreference(KEY_DOZE_ALWAYS_ON);
         mDozeAlwaysOnSchedulePreference = findPreference(KEY_DOZE_ALWAYS_ON_SCHEDULE);
         mDozeOnChargePreference = (SwitchPreferenceCompat) findPreference(KEY_DOZE_ON_CHARGE);
+        mCustomImagePreference = findPreference(KEY_CUSTOM_AOD_IMAGE);
         mPulseOnNewTracksPreference = (SwitchPreferenceCompat) findPreference(KEY_PULSE_ON_NEW_TRACKS);
 
         // Hides always on toggle if device doesn't support it (based on config_dozeAlwaysOnDisplayAvailable overlay)
@@ -79,6 +95,8 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
             getPreferenceScreen().removePreference(mDozeAlwaysOnPreference);
             getPreferenceScreen().removePreference(mDozeAlwaysOnSchedulePreference);
             getPreferenceScreen().removePreference(mDozeOnChargePreference);
+            getPreferenceScreen().removePreference(findPreference("custom_aod_image_enabled"));
+            if (mCustomImagePreference != null) getPreferenceScreen().removePreference(mCustomImagePreference);
         } else {
             mDozeAlwaysOnPreference.setChecked(Utils.isDozeAlwaysOnEnabled(context));
             mDozeAlwaysOnPreference.setOnPreferenceChangeListener(this);
@@ -87,6 +105,8 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
                     Settings.Secure.DOZE_ON_CHARGE,
                     0, UserHandle.USER_CURRENT) != 0;
             mDozeOnChargePreference.setChecked(dozeOnCharge);
+
+            updateCustomImagePreference();
         }
 
         updatePreferenceStates();
@@ -106,6 +126,8 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
         return false;
     }
 
+
+
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
         Settings.Secure.putIntForUser(resolver,
@@ -123,10 +145,74 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
         EdgeLightSettings.Companion.reset(mContext);
     }
 
+    private void updateCustomImagePreference() {
+        if (mCustomImagePreference == null) return;
+
+        int clockStyle = Settings.Secure.getIntForUser(
+                getContext().getContentResolver(),
+            Settings.Secure.LOCK_SCREEN_CUSTOM_CLOCK_STYLE, 0, UserHandle.USER_CURRENT);
+        String imagePath = Settings.System.getString(
+                getContext().getContentResolver(), "custom_aod_image_uri");
+
+        if (imagePath != null && clockStyle > 0) {
+            mCustomImagePreference.setSummary(imagePath);
+            mCustomImagePreference.setEnabled(true);
+        } else if (clockStyle == 0) {
+            mCustomImagePreference.setSummary(
+                    getContext().getString(R.string.custom_aod_image_not_supported));
+            mCustomImagePreference.setEnabled(false);
+        }
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mCustomImagePreference) {
+            try {
+                Intent intent = new Intent(Intent.ACTION_PICK,
+                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                intent.setType("image/*");
+                startActivityForResult(intent, CUSTOM_IMAGE_REQUEST_CODE);
+            } catch (Exception e) {
+                Toast.makeText(getContext(),
+                        R.string.quick_settings_header_needs_gallery,
+                        Toast.LENGTH_LONG).show();
+            }
+            return true;
+        }
+        return super.onPreferenceTreeClick(preference);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent result) {
+        super.onActivityResult(requestCode, resultCode, result);
+        if (requestCode == CUSTOM_IMAGE_REQUEST_CODE
+                && resultCode == Activity.RESULT_OK
+                && result != null) {
+            Uri imgUri = result.getData();
+            if (imgUri != null) {
+                String savedImagePath = ImageUtils.saveImageToInternalStorage(
+                        getContext(), imgUri,
+                        "lockscreen_aod_image",
+                        "LOCKSCREEN_CUSTOM_AOD_IMAGE");
+                if (savedImagePath != null) {
+                    Settings.System.putStringForUser(
+                            getContext().getContentResolver(),
+                            "custom_aod_image_uri",
+                            savedImagePath,
+                            UserHandle.USER_CURRENT);
+                    mCustomImagePreference.setSummary(savedImagePath);
+                }
+            }
+        }
+    }
+
     @Override
     public void onResume() {
         super.onResume();
         updatePreferenceStates();
+        if (Utils.isDozeAlwaysOnAvailable(getContext())) {
+            updateCustomImagePreference();
+        }
     }
 
     private void updatePreferenceStates() {
@@ -159,6 +245,8 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
                         keys.add(KEY_DOZE_ALWAYS_ON);
                         keys.add(KEY_DOZE_ALWAYS_ON_SCHEDULE);
                         keys.add(KEY_DOZE_ON_CHARGE);
+                        keys.add("custom_aod_image_enabled");
+                        keys.add(KEY_CUSTOM_AOD_IMAGE);
                     }
 
                     return keys;

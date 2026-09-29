@@ -407,14 +407,10 @@
     <string name="charging_show_on_lockscreen_summary">Wyświetlaj efekty, gdy ekran blokady jest widoczny</string>
     <string name="charging_show_on_aod_title">Pokaż na wyświetlaczu Always-On</string>
     <string name="charging_show_on_aod_summary">Wyświetlaj efekty w trybie otoczenia</string>
-    <string name="qs_brightness_slider_style_title">Minimalny styl suwaka jasności</string>
-    <string name="qs_brightness_slider_style_summary">Włącz minimalny styl dla suwaka jasności</string>
     <string name="show_volume_percentage_title">Pokaż procent głośności</string>
     <string name="show_volume_percentage_summary">Wyświetl procent głośności w panelu głośności</string>
     <string name="disable_flash_sms_title">Wyłącz zdarzenia Flash SMS</string>
     <string name="disable_flash_sms_summary">Wyłącz pełnoekranowe wiadomości Flash SMS i odbieraj je jako zwykłe wiadomości</string>
-    <string name="notification_bubble_apps_title">Powiadomienia w bąbelkach</string>
-    <string name="notification_bubble_apps_summary">Uruchamiaj aplikacje w bąbelku po kliknięciu ich powiadomień</string>
     <string name="infinity_qs_style_title">Styl panelu Szybkich Ustawień</string>
     <string name="infinity_qs_style_stock">Styl oryginalny</string>
     <string name="infinity_qs_style_infinity_x">Styl Infinity X</string>

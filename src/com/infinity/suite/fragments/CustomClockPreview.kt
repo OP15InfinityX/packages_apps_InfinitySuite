@@ -47,8 +47,6 @@ class CustomClockPreview : SettingsPreferenceFragment() {
     companion object {
         private const val TAG = "LockClockPreview"
         private const val PREF_FIRST_TIME = "first_time_clock_face_access"
-        private const val LOCK_SCREEN_CUSTOM_CLOCK_STYLE = "lock_screen_custom_clock_style"
-        private const val LOCK_SCREEN_CUSTOM_CLOCK_FACE = "lock_screen_custom_clock_face"
 
         private val mCenterClocks = intArrayOf(
             4, 5, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34,
@@ -181,13 +179,13 @@ class CustomClockPreview : SettingsPreferenceFragment() {
         viewPager?.adapter = pagerAdapter
         mClockPosition = Settings.Secure.getIntForUser(
             requireContext().contentResolver,
-            LOCK_SCREEN_CUSTOM_CLOCK_STYLE, 0, UserHandle.USER_CURRENT
+            Settings.Secure.LOCK_SCREEN_CUSTOM_CLOCK_STYLE, 0, UserHandle.USER_CURRENT
         )
         if (mClockPosition < 0 || mClockPosition >= CLOCK_LAYOUTS.size) {
             mClockPosition = 0
             Settings.Secure.putIntForUser(
                 requireContext().contentResolver,
-                LOCK_SCREEN_CUSTOM_CLOCK_STYLE, 0, UserHandle.USER_CURRENT
+                Settings.Secure.LOCK_SCREEN_CUSTOM_CLOCK_STYLE, 0, UserHandle.USER_CURRENT
             )
         }
         viewPager?.currentItem = mClockPosition
@@ -262,12 +260,17 @@ class CustomClockPreview : SettingsPreferenceFragment() {
         applyFab?.setOnClickListener {
             Settings.Secure.putIntForUser(
                 requireContext().contentResolver,
-                LOCK_SCREEN_CUSTOM_CLOCK_STYLE, mClockPosition,
+                Settings.Secure.LOCK_SCREEN_CUSTOM_CLOCK_STYLE, mClockPosition,
                 UserHandle.USER_CURRENT
             )
             Settings.Secure.putIntForUser(
                 requireContext().contentResolver,
-                LOCK_SCREEN_CUSTOM_CLOCK_FACE, 0,
+                Settings.Secure.LOCK_SCREEN_CUSTOM_CLOCK_FACE, 0,
+                UserHandle.USER_CURRENT
+            )
+            Settings.Secure.putIntForUser(
+                requireContext().contentResolver,
+                Settings.Secure.LOCKSCREEN_SMARTSPACE_ENABLED, 0,
                 UserHandle.USER_CURRENT
             )
             updateClockOverlays(mClockPosition)
