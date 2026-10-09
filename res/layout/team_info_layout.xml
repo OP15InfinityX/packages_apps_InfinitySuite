@@ -38,6 +38,7 @@
                 android:text="@string/team_title"
                 android:textSize="22sp"
                 android:textStyle="bold"
+                android:fontFamily="variable-title-large-emphasized"
                 android:textColor="?android:attr/textColorPrimary" />
 
             <TextView
@@ -89,6 +90,7 @@
                         android:text="@string/team_tejas"
                         android:textSize="16sp"
                         android:textStyle="bold"
+                        android:fontFamily="variable-title-medium-emphasized"
                         android:textColor="#FFFFFF"
                         android:shadowColor="#80000000"
                         android:shadowDx="1"
@@ -151,6 +153,7 @@
                             android:text="@string/loved_rom"
                             android:textSize="20sp"
                             android:textStyle="bold"
+                            android:fontFamily="variable-title-large-emphasized"
                             android:textColor="#FFFFFF" />
 
                         <TextView
@@ -191,6 +194,7 @@
                         android:text="@string/donate_paypal"
                         android:textColor="#1976D2"
                         android:textSize="16sp"
+                        android:fontFamily="variable-title-medium-emphasized"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -221,6 +225,7 @@
                         android:text="@string/donate_coffee"
                         android:textColor="#1976D2"
                         android:textSize="16sp"
+                        android:fontFamily="variable-title-medium-emphasized"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -250,6 +255,7 @@
                         android:text="@string/donate_upi"
                         android:textColor="#1976D2"
                         android:textSize="16sp"
+                        android:fontFamily="variable-title-medium-emphasized"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
