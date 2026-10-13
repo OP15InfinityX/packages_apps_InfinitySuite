@@ -243,6 +243,9 @@
     <string name="cancel">Отмена</string>
     <string name="custom_font">Пользовательский шрифт</string>
     <string name="reset">Сброс</string>
+    <string name="lockscreen_smartspace_title">Smartspace</string>
+    <string name="lockscreen_smartspace_summary">Отображать Google «Самое важное» на экране блокировки</string>
+    <string name="lockscreen_smartspace_disabled_summary">Эта функция недоступна при использовании кастомных часов экрана блокировки.</string>
     <string name="media_waveform_seekbar_title">Ползунок медиа в виде волны</string>
     <string name="media_waveform_seekbar_summary">Включить анимированный эффект волны для прогресса воспроизведения медиа</string>
     <string name="expanded_volume_dialog_title">Использовать расширенный диалог громкости</string>
@@ -450,6 +453,8 @@
     <string name="doze_peek_title">AOD Peek</string>
     <string name="doze_peek_summary">Показывать Ambient дисплей на короткое время при выключении экрана</string>
     <string name="doze_peek_duration_title">Длительность Peek</string>
+    <string name="doze_brightness_title">Яркость AOD и индикации</string>
+    <string name="doze_brightness_summary">Укажите уровень яркости экрана для Always On Display и индикации</string>
     <string name="lock_screen_custom_clock_gradient_title">Градиент стиля пользовательских часов экрана блокировки</string>
     <string name="lock_screen_custom_clock_gradient_summary">Включить градиентный цвет для пользовательских стилей часов на экране блокировки</string>
     <string name="qs_classic_tile_icon_size_title">Размер иконок классических плиток</string>

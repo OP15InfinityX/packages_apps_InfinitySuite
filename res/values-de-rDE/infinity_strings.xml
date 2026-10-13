@@ -243,6 +243,9 @@
     <string name="cancel">Abbrechen</string>
     <string name="custom_font">Benutzerdefinierte Schriftart</string>
     <string name="reset">Zurücksetzen</string>
+    <string name="lockscreen_smartspace_title">Smartspace</string>
+    <string name="lockscreen_smartspace_summary">Google-Funktion \"Auf einen Blick\" auf dem Sperrbildschirm anzeigen</string>
+    <string name="lockscreen_smartspace_disabled_summary">Diese Funktion kann nicht aktiviert werden, solange benutzerdefinierte Sperrbildschirm-Uhren verwendet werden.</string>
     <string name="media_waveform_seekbar_title">Wellenförmige Mediensuchleiste</string>
     <string name="media_waveform_seekbar_summary">Aktiviere einen animierten Welleneffekt für den Medienwiedergabefortschritt</string>
     <string name="expanded_volume_dialog_title">Erweiterten Lautstärke-Dialog verwenden</string>
@@ -450,6 +453,8 @@
     <string name="doze_peek_title">AOD-Vorschau</string>
     <string name="doze_peek_summary">Zeige das Ambient Display kurz an, wenn der Bildschirm ausgeschaltet wird</string>
     <string name="doze_peek_duration_title">Dauer der Vorschau</string>
+    <string name="doze_brightness_title">AOD- &amp; Inaktivitätsdisplay-Helligkeit</string>
+    <string name="doze_brightness_summary">Bildschirmhelligkeit für Always On Display und Inaktivitätsdisplay festlegen</string>
     <string name="lock_screen_custom_clock_gradient_title">Sperrbildschirm-Uhrzeitstil Verlauf</string>
     <string name="lock_screen_custom_clock_gradient_summary">Aktiviere Verlauffarben für benutzerdefinierte Sperrbildschirm-Uhrzeitstile</string>
     <string name="qs_classic_tile_icon_size_title">Symbolgröße der klassischen Kacheln</string>

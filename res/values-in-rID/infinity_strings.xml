@@ -242,8 +242,11 @@
 <string name="custom_font_reset_success">Font kustom berhasil diatur ulang</string>
 <string name="cancel">Batal</string>
 <string name="custom_font">Font kustom</string>
-<string name="reset">Atur ulang</string>
-<string name="media_waveform_seekbar_title">Bilah Pencari Bentuk Gelombang Media</string>
+    <string name="reset">Atur ulang</string>
+    <string name="lockscreen_smartspace_title">Smartspace</string>
+    <string name="lockscreen_smartspace_summary">Tampilkan At a Glance Google di layar kunci</string>
+    <string name="lockscreen_smartspace_disabled_summary">Fitur ini tidak dapat diaktifkan saat Jam Layar Kunci Kustom digunakan.</string>
+    <string name="media_waveform_seekbar_title">Bilah Pencari Bentuk Gelombang Media</string>
 <string name="media_waveform_seekbar_summary">Aktifkan efek bentuk gelombang animasi untuk progres pemutaran media</string>
 <string name="expanded_volume_dialog_title">Gunakan Dialog Volume yang Diperluas</string>
 <string name="expanded_volume_dialog_summary">Aktifkan UI panel volume gaya Diperluas</string>
@@ -450,6 +453,8 @@
     <string name="doze_peek_title">AOD Peek</string>
     <string name="doze_peek_summary">Tampilkan tampilan ambient sebentar saat layar mati</string>
     <string name="doze_peek_duration_title">Durasi Peek</string>
+    <string name="doze_brightness_title">Kecerahan AOD &amp; Tampilan ambient</string>
+    <string name="doze_brightness_summary">Atur tingkat kecerahan layar untuk Always On Display dan Tampilan ambient</string>
     <string name="lock_screen_custom_clock_gradient_title">Gradien gaya jam layar kunci</string>
     <string name="lock_screen_custom_clock_gradient_summary">Aktifkan warna gradien pada gaya jam kustom layar kunci</string>
     <string name="qs_classic_tile_icon_size_title">Ukuran ikon ubin klasik</string>

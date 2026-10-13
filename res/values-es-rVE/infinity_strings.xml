@@ -243,7 +243,10 @@
     <string name="cancel">Cancelar</string>
     <string name="custom_font">Fuente personalizada</string>
     <string name="reset">Restablecer</string>
-    <string name="media_waveform_seekbar_title">Barra de búsqueda multimedia con forma de onda</string>
+    <string name="lockscreen_smartspace_title">Smartspace</string>
+    <string name="lockscreen_smartspace_summary">Mostrar Un vistazo de Google en la pantalla de bloqueo</string>
+    <string name="lockscreen_smartspace_disabled_summary">Esta función no se puede activar mientras se usan relojes personalizados en la pantalla de bloqueo.</string>
+    <string name="media_waveform_seekbar_title">Barra de búsqueda de medios con forma de onda</string>
     <string name="media_waveform_seekbar_summary">Activar el efecto de forma de onda animada para el progreso de reproducción multimedia</string>
     <string name="expanded_volume_dialog_title">Usar diálogo de volumen expandido</string>
     <string name="expanded_volume_dialog_summary">Activar la interfaz de usuario del panel de volumen con estilo expandido</string>
@@ -450,6 +453,8 @@
     <string name="doze_peek_title">Vistazo AOD</string>
     <string name="doze_peek_summary">Mostrar la pantalla ambiental brevemente cuando la pantalla se apaga</string>
     <string name="doze_peek_duration_title">Duración del vistazo</string>
+    <string name="doze_brightness_title">Brillo de AOD y pantalla ambiente</string>
+    <string name="doze_brightness_summary">Ajustar el nivel de brillo de la pantalla para Always On Display y pantalla ambiente</string>
     <string name="lock_screen_custom_clock_gradient_title">Gradiente de estilo de reloj de la pantalla de bloqueo</string>
     <string name="lock_screen_custom_clock_gradient_summary">Activar color degradado en los estilos de reloj personalizados de la pantalla de bloqueo</string>
     <string name="qs_classic_tile_icon_size_title">Tamaño de icono de mosaico clásico</string>

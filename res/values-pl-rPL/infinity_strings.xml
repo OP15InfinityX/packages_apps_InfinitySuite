@@ -243,6 +243,9 @@
     <string name="cancel">Anuluj</string>
     <string name="custom_font">Niestandardowa czcionka</string>
     <string name="reset">Przywróć</string>
+    <string name="lockscreen_smartspace_title">Smartspace</string>
+    <string name="lockscreen_smartspace_summary">Wyświetlaj funkcję W skrócie Google na ekranie blokady</string>
+    <string name="lockscreen_smartspace_disabled_summary">Ta funkcja nie może być włączona, gdy używane są niestandardowe zegary ekranu blokady.</string>
     <string name="media_waveform_seekbar_title">Pasek postępu w formie przebiegu</string>
     <string name="media_waveform_seekbar_summary">Włącz animowany efekt przebiegu dla postępu odtwarzania multimediów</string>
     <string name="expanded_volume_dialog_title">Użyj rozszerzonego okna głośności</string>
@@ -450,6 +453,8 @@
     <string name="doze_peek_title">Podgląd AOD</string>
     <string name="doze_peek_summary">Pokaż krótko wyświetlacz czuwający po wyłączeniu ekranu</string>
     <string name="doze_peek_duration_title">Czas podglądu</string>
+    <string name="doze_brightness_title">Jasność AOD i ekranu dostosowanego</string>
+    <string name="doze_brightness_summary">Ustaw poziom jasności ekranu dla Always On Display i ekranu dostosowanego</string>
     <string name="lock_screen_custom_clock_gradient_title">Gradient stylu zegara na ekranie blokady</string>
     <string name="lock_screen_custom_clock_gradient_summary">Włącz kolor gradientowy na niestandardowych stylach zegara na ekranie blokady</string>
     <string name="qs_classic_tile_icon_size_title">Rozmiar ikony klasycznego kafelka</string>

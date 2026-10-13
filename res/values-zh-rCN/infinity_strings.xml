@@ -243,6 +243,9 @@
     <string name="cancel">取消</string>
     <string name="custom_font">自定义字体</string>
     <string name="reset">重置</string>
+    <string name="lockscreen_smartspace_title">智能空间</string>
+    <string name="lockscreen_smartspace_summary">在锁屏界面显示 Google 概览 (At a Glance)</string>
+    <string name="lockscreen_smartspace_disabled_summary">在使用自定义锁屏时钟时无法启用此功能。</string>
     <string name="media_waveform_seekbar_title">波形媒体进度条</string>
     <string name="media_waveform_seekbar_summary">为媒体播放进度启用动画波形效果</string>
     <string name="expanded_volume_dialog_title">使用展开式音量对话框</string>
@@ -450,6 +453,8 @@
     <string name="doze_peek_title">AOD Peek</string>
     <string name="doze_peek_summary">屏幕关闭时短暂显示 Ambient 显示</string>
     <string name="doze_peek_duration_title">Peek 持续时间</string>
+    <string name="doze_brightness_title">AOD &amp; 环境显示亮度</string>
+    <string name="doze_brightness_summary">设置息屏显示和环境显示的屏幕亮度级别</string>
     <string name="lock_screen_custom_clock_gradient_title">锁屏自定义时钟渐变</string>
     <string name="lock_screen_custom_clock_gradient_summary">在锁屏自定义时钟样式上启用渐变颜色</string>
     <string name="qs_classic_tile_icon_size_title">经典磁贴图标大小</string>

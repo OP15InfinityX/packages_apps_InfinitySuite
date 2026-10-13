@@ -243,6 +243,9 @@
     <string name="cancel">Annuler</string>
     <string name="custom_font">Police personnalisée</string>
     <string name="reset">Réinitialiser</string>
+    <string name="lockscreen_smartspace_title">Smartspace</string>
+    <string name="lockscreen_smartspace_summary">Afficher l\'Aperçu de Google sur l\'écran de verrouillage</string>
+    <string name="lockscreen_smartspace_disabled_summary">Cette fonctionnalité ne peut pas être activée si des horloges d\'écran de verrouillage personnalisées sont utilisées.</string>
     <string name="media_waveform_seekbar_title">Barre de progression média Waveform</string>
     <string name="media_waveform_seekbar_summary">Activer l\'effet de forme d\'onde animée pour la progression de la lecture multimédia</string>
     <string name="expanded_volume_dialog_title">Utiliser la boîte de dialogue de volume étendue</string>
@@ -450,6 +453,8 @@
     <string name="doze_peek_title">Aperçu AOD</string>
     <string name="doze_peek_summary">Afficher brièvement l\'affichage ambiant lorsque l\'écran s\'éteint</string>
     <string name="doze_peek_duration_title">Durée de l\'aperçu</string>
+    <string name="doze_brightness_title">Luminosité de l\'AOD et de l\'affichage ambiant</string>
+    <string name="doze_brightness_summary">Définir le niveau de luminosité de l\'écran pour l\'Always On Display et l\'affichage ambiant</string>
     <string name="lock_screen_custom_clock_gradient_title">Dégradé du style d\'horloge de l\'écran de verrouillage</string>
     <string name="lock_screen_custom_clock_gradient_summary">Activer la couleur dégradée sur les styles d\'horloge personnalisés de l\'écran de verrouillage</string>
     <string name="qs_classic_tile_icon_size_title">Taille des icônes des tuiles classiques</string>

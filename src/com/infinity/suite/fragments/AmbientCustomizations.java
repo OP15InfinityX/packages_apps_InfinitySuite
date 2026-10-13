@@ -99,7 +99,6 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
             getPreferenceScreen().removePreference(mDozeAlwaysOnSchedulePreference);
             getPreferenceScreen().removePreference(mDozeOnChargePreference);
             getPreferenceScreen().removePreference(mAodBatteryInfoPreference);
-            getPreferenceScreen().removePreference(mAodBatteryInfoPreference);
             getPreferenceScreen().removePreference(findPreference("custom_aod_image_enabled"));
             if (mCustomImagePreference != null) getPreferenceScreen().removePreference(mCustomImagePreference);
         } else {
@@ -145,6 +144,8 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
                 UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
                 Settings.Secure.DOZE_ALWAYS_ON_AUTO_MODE, 0, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.DOZE_BRIGHTNESS, 35, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
                 Settings.Secure.DOZE_ON_CHARGE, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
@@ -258,7 +259,6 @@ public class AmbientCustomizations extends SettingsPreferenceFragment implements
                         keys.add(KEY_DOZE_ALWAYS_ON);
                         keys.add(KEY_DOZE_ALWAYS_ON_SCHEDULE);
                         keys.add(KEY_DOZE_ON_CHARGE);
-                        keys.add(KEY_AOD_BATTERY_INFO);
                         keys.add(KEY_AOD_BATTERY_INFO);
                         keys.add("custom_aod_image_enabled");
                         keys.add(KEY_CUSTOM_AOD_IMAGE);

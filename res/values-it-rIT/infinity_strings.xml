@@ -243,6 +243,9 @@
     <string name="cancel">Annulla</string>
     <string name="custom_font">Carattere personalizzato</string>
     <string name="reset">Reimposta</string>
+    <string name="lockscreen_smartspace_title">Smartspace</string>
+    <string name="lockscreen_smartspace_summary">Mostra At a Glance di Google nella schermata di blocco</string>
+    <string name="lockscreen_smartspace_disabled_summary">Questa funzione non può essere abilitata quando sono in uso gli orologi personalizzati della schermata di blocco.</string>
     <string name="media_waveform_seekbar_title">Barra di ricerca multimediale waveform</string>
     <string name="media_waveform_seekbar_summary">Abilita l\'effetto waveform animato per l\'avanzamento della riproduzione multimediale</string>
     <string name="expanded_volume_dialog_title">Usa finestra volume estesa</string>
@@ -450,6 +453,8 @@
     <string name="doze_peek_title">AOD Peek</string>
     <string name="doze_peek_summary">Mostra brevemente il display ambientale quando lo schermo si spegne</string>
     <string name="doze_peek_duration_title">Durata visualizzazione</string>
+    <string name="doze_brightness_title">Luminosità AOD &amp; Display Ambient</string>
+    <string name="doze_brightness_summary">Imposta il livello di luminosità dello schermo per Always On Display e Display Ambient</string>
     <string name="lock_screen_custom_clock_gradient_title">Sfumatura stile orologio schermata di blocco</string>
     <string name="lock_screen_custom_clock_gradient_summary">Abilita il colore sfumato sugli stili orologio personalizzati della schermata di blocco</string>
     <string name="qs_classic_tile_icon_size_title">Dimensione icona tile classica</string>

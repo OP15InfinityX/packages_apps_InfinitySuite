@@ -91,6 +91,16 @@
 
     </PreferenceCategory>
 
+    <com.infinity.support.preferences.SecureSettingSeekBarPreference
+        android:key="doze_brightness"
+        android:title="@string/doze_brightness_title"
+        android:summary="@string/doze_brightness_summary"
+        android:defaultValue="35"
+        android:max="100"
+        settings:min="1"
+        settings:units="%"
+        settings:interval="1" />
+
     <lineageos.preference.RemotePreference
         android:key="doze_device_settings"
         android:title="@string/doze_additional_settings_title"

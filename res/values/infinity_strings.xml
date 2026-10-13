@@ -601,6 +601,10 @@
     <string name="doze_peek_summary">Show ambient display briefly when the screen turns off</string>
     <string name="doze_peek_duration_title">Peek duration</string>
 
+    <!-- Doze brightness -->
+    <string name="doze_brightness_title">AOD &amp; Ambient display brightness</string>
+    <string name="doze_brightness_summary">Set screen brightness level for Always On Display and Ambient display</string>
+
     <!-- Lockscreen custom clock styles gradient -->
     <string name="lock_screen_custom_clock_gradient_title">Lockscreen clock style gradient</string>
     <string name="lock_screen_custom_clock_gradient_summary">Enable gradient color on lockscreen custom clock styles</string>

@@ -243,6 +243,9 @@
     <string name="cancel">Hủy</string>
     <string name="custom_font">Phông chữ tùy chỉnh</string>
     <string name="reset">Đặt lại</string>
+    <string name="lockscreen_smartspace_title">Smartspace</string>
+    <string name="lockscreen_smartspace_summary">Hiển thị At a Glance của Google trên màn hình khóa</string>
+    <string name="lockscreen_smartspace_disabled_summary">Không thể bật tính năng này khi đang sử dụng Đồng hồ màn hình khóa tùy chỉnh.</string>
     <string name="media_waveform_seekbar_title">Thanh trượt tiến trình dạng sóng</string>
     <string name="media_waveform_seekbar_summary">Bật hiệu ứng dạng sóng động cho tiến trình phát lại đa phương tiện</string>
     <string name="expanded_volume_dialog_title">Sử dụng Hộp thoại Âm lượng mở rộng</string>
@@ -450,6 +453,8 @@
     <string name="doze_peek_title">Xem trước AOD (Peek)</string>
     <string name="doze_peek_summary">Hiển thị màn hình môi trường (ambient display) trong thời gian ngắn khi màn hình tắt</string>
     <string name="doze_peek_duration_title">Thời lượng xem trước (Peek)</string>
+    <string name="doze_brightness_title">Độ sáng AOD &amp; Màn hình hiển thị</string>
+    <string name="doze_brightness_summary">Đặt mức độ sáng màn hình cho Always On Display và Màn hình hiển thị</string>
     <string name="lock_screen_custom_clock_gradient_title">Chuyển sắc kiểu đồng hồ màn hình khóa</string>
     <string name="lock_screen_custom_clock_gradient_summary">Bật màu chuyển sắc trên kiểu đồng hồ tùy chỉnh màn hình khóa</string>
     <string name="qs_classic_tile_icon_size_title">Kích thước biểu tượng ô cổ điển</string>

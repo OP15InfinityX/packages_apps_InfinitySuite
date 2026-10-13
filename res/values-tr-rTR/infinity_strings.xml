@@ -243,6 +243,9 @@
     <string name="cancel">İptal</string>
     <string name="custom_font">Özel yazı tipi</string>
     <string name="reset">Sıfırla</string>
+    <string name="lockscreen_smartspace_title">Smartspace</string>
+    <string name="lockscreen_smartspace_summary">Kilit ekranında Google\'ın Bir Bakışta özelliğini gösterin</string>
+    <string name="lockscreen_smartspace_disabled_summary">Özel Kilit Ekranı Saatleri kullanılırken bu özellik etkinleştirilemez.</string>
     <string name="media_waveform_seekbar_title">Dalga Formlu Medya Arama Çubuğu</string>
     <string name="media_waveform_seekbar_summary">Medya oynatma ilerlemesi için animasyonlu dalga formu efektini etkinleştir</string>
     <string name="expanded_volume_dialog_title">Genişletilmiş Ses Düzeyi İletişim Kutusu Kullan</string>
@@ -450,6 +453,8 @@
     <string name="doze_peek_title">AOD Göz Atma</string>
     <string name="doze_peek_summary">Ekran kapandığında ortam ekranını kısaca göster</string>
     <string name="doze_peek_duration_title">Göz atma süresi</string>
+    <string name="doze_brightness_title">AOD ve Ortam ekranı parlaklığı</string>
+    <string name="doze_brightness_summary">Her Zaman Açık Ekran ve Ortam ekranı için ekran parlaklık seviyesini ayarlayın</string>
     <string name="lock_screen_custom_clock_gradient_title">Kilit ekranı saat stili gradyanı</string>
     <string name="lock_screen_custom_clock_gradient_summary">Kilit ekranı özel saat stillerinde gradyan rengi etkinleştir</string>
     <string name="qs_classic_tile_icon_size_title">Klasik döşeme simge boyutu</string>

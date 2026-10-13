@@ -243,6 +243,9 @@
     <string name="cancel">Cancelar</string>
     <string name="custom_font">Fonte personalizada</string>
     <string name="reset">Redefinir</string>
+    <string name="lockscreen_smartspace_title">Smartspace</string>
+    <string name="lockscreen_smartspace_summary">Exibir o At a Glance do Google na tela de bloqueio</string>
+    <string name="lockscreen_smartspace_disabled_summary">Este recurso não pode ser ativado enquanto relógios personalizados da tela de bloqueio estiverem em uso.</string>
     <string name="media_waveform_seekbar_title">Barra de busca de mídia com forma de onda</string>
     <string name="media_waveform_seekbar_summary">Ativar efeito de forma de onda animada para o progresso da reprodução de mídia</string>
     <string name="expanded_volume_dialog_title">Usar Diálogo de Volume Expandido</string>
@@ -450,6 +453,8 @@
     <string name="doze_peek_title">Visualização Rápida AOD</string>
     <string name="doze_peek_summary">Mostrar a tela ambiente brevemente quando a tela for desligada</string>
     <string name="doze_peek_duration_title">Duração da visualização</string>
+    <string name="doze_brightness_title">Brilho do AOD e tela ambiente</string>
+    <string name="doze_brightness_summary">Definir o nível de brilho da tela para Always On Display e Tela ambiente</string>
     <string name="lock_screen_custom_clock_gradient_title">Gradiente do estilo de relógio da tela de bloqueio</string>
     <string name="lock_screen_custom_clock_gradient_summary">Ativar cor gradiente nos estilos de relógio personalizados da tela de bloqueio</string>
     <string name="qs_classic_tile_icon_size_title">Tamanho do ícone do bloco clássico</string>
