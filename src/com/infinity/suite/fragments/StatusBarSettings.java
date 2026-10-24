@@ -74,6 +74,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private static final String CARRIER_NAME = "lockscreen_show_carrier";
     private static final String CUSTOM_CARRIER_LABEL = "lockscreen_show_custom_carrier_text";
     private static final String STATUS_BAR_DYNAMIC_ISLAND = "status_bar_dynamic_island";
+    private static final String STATUS_BAR_BURN_IN_PROTECTION = "status_bar_burn_in_protection";
 
     private static final int PULLDOWN_DIR_NONE = 0;
     private static final int PULLDOWN_DIR_RIGHT = 1;
@@ -84,6 +85,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private LineageSystemSettingListPreference mQuickPulldown;
     private SystemSettingListPreference mLogoColor;
     private ColorPickerPreference mLogoColorPicker;
+    private SwitchPreferenceCompat mStatusBarBurnInProtection;
 
     private ContentResolver resolver;
 
@@ -100,6 +102,9 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         Context mContext = getActivity().getApplicationContext();
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mStatusBarBurnInProtection = findPreference(STATUS_BAR_BURN_IN_PROTECTION);
+        mStatusBarBurnInProtection.setOnPreferenceChangeListener(this);
 
         mStatusBarClock =
                 (LineageSystemSettingListPreference) findPreference(STATUS_BAR_CLOCK_STYLE);
@@ -167,7 +172,19 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mQuickPulldown) {
+        if (preference == mStatusBarBurnInProtection) {
+            if (!((Boolean) newValue)) {
+                new AlertDialog.Builder(getActivity())
+                        .setTitle(R.string.status_bar_burn_in_protection_disable_title)
+                        .setMessage(R.string.status_bar_burn_in_protection_disable_message)
+                        .setPositiveButton(android.R.string.ok,
+                                (dialog, which) -> mStatusBarBurnInProtection.setChecked(false))
+                        .setNegativeButton(android.R.string.cancel, null)
+                        .show();
+                return false;
+            }
+            return true;
+        } else if (preference == mQuickPulldown) {
             int value = Integer.parseInt((String) newValue);
             updateQuickPulldownSummary(value);
             return true;
@@ -257,6 +274,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
+
+        Settings.Global.putInt(resolver, STATUS_BAR_BURN_IN_PROTECTION, 1);
 
         LineageSettings.System.putIntForUser(resolver,
                 LineageSettings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);

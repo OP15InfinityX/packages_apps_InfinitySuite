@@ -70,6 +70,12 @@
     <PreferenceCategory
         android:title="@string/general_category">
 
+        <com.infinity.support.preferences.GlobalSettingSwitchPreference
+            android:key="status_bar_burn_in_protection"
+            android:title="@string/status_bar_burn_in_protection_title"
+            android:summary="@string/status_bar_burn_in_protection_summary"
+            android:defaultValue="true" />
+
     <lineageos.preference.LineageSystemSettingListPreference
             android:key="status_bar_battery_style"
             android:title="@string/status_bar_battery_style_title"

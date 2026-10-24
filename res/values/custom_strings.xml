@@ -976,6 +976,10 @@
     <string name="statusbar_expanded_extra_padding_start_title">Expanded start padding</string>
     <string name="statusbar_expanded_extra_padding_top_title">Expanded top padding</string>
     <string name="statusbar_expanded_extra_padding_end_title">Expanded end padding</string>
+    <string name="status_bar_burn_in_protection_title">Status bar burn-in protection</string>
+    <string name="status_bar_burn_in_protection_summary">Move status bar icons slightly over time to reduce OLED burn-in</string>
+    <string name="status_bar_burn_in_protection_disable_title">Disable burn-in protection?</string>
+    <string name="status_bar_burn_in_protection_disable_message">The status bar icons will stay in the same position. This may cause OLED burn-in over time. Continue at your own risk.</string>
 
     <string name="wifi_per_connection_random_mac_addr">Use per-connection randomized MAC (default)</string>
     <string name="wifi_per_network_random_mac_addr">Use per-network randomized MAC</string>
