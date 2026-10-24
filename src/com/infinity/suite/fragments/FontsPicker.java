@@ -69,7 +69,7 @@ public class FontsPicker extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
         getActivity().setTitle(R.string.theme_customization_font_title);
 
-        mThemeUtils = new ThemeUtils(getActivity());
+        mThemeUtils = ThemeUtils.getInstance(getActivity());
         mPkgs = mThemeUtils.getOverlayPackagesForCategory(mCategory, "android");
 
         if (savedInstanceState != null) {

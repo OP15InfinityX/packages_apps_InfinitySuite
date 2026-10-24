@@ -60,7 +60,7 @@ public class FontStyle extends SettingsPreferenceFragment implements
 
         addPreferencesFromResource(R.xml.font_style);
 
-        mThemeUtils = new ThemeUtils(getActivity());
+        mThemeUtils = ThemeUtils.getInstance(getActivity());
         mFontInstaller = new ExternalFontInstaller(getActivity());
 
         mFontModePref = findPreference(KEY_FONT_MODE);

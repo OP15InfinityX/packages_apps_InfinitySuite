@@ -163,7 +163,7 @@ class CustomClockPreview : SettingsPreferenceFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activity?.title = activity?.getString(R.string.custom_clock_style)
-        mThemeUtils = ThemeUtils(activity!!)
+        mThemeUtils = ThemeUtils.getInstance(activity!!)
     }
 
     override fun onCreateView(
