@@ -466,6 +466,10 @@
     <string name="status_bar_dynamic_island_summary">Bringe Live-Aktivitäten, Steuerelemente und Updates zur Kameraaussparung</string>
     <string name="dynamic_island_width_title">Dynamic Island Breite</string>
     <string name="dynamic_island_width_summary">Passe die horizontale Länge des Dynamic Island-Chips an</string>
+    <string name="dynamic_island_height_title">Dicke der Dynamic Island</string>
+    <string name="dynamic_island_height_summary">Ändere die Höhe der kompakten Island</string>
+    <string name="dynamic_island_vertical_offset_title">Vertikale Position</string>
+    <string name="dynamic_island_vertical_offset_summary">Verschiebe die Island leicht nach oben oder unten um die Kameraaussparung</string>
     <string name="dynamic_island_footer_title">Über Dynamic Island</string>
     <string name="dynamic_island_intro">✨ Dynamic Island bringt deine laufenden Aktivitäten rund um die Kameraaussparung zum Leben.\n🎵 Steuere deine Musik\n⏺️ Behalte Bildschirmaufnahmen im Blick\n🔦 Steuere deine Taschenlampe\n🏆 Verfolge Live-Ergebnisse\n🎤 Genieße synchronisierte Liedtexte\n🚀 Alles bleibt ganz oben auf deinem Bildschirm, bereit wenn du es brauchst, ohne dich zu behindern.</string>
     <string name="dynamic_island_features_title">Funktionen</string>
