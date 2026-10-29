@@ -453,6 +453,8 @@
     <string name="doze_peek_title">AOD Peek</string>
     <string name="doze_peek_summary">Mostra brevemente il display ambientale quando lo schermo si spegne</string>
     <string name="doze_peek_duration_title">Durata visualizzazione</string>
+    <string name="custom_doze_brightness_title">Luminosità personalizzata AOD &amp; Display Ambient</string>
+    <string name="custom_doze_brightness_summary">Attiva il livello di luminosità personalizzato per Always On Display e Display Ambient</string>
     <string name="doze_brightness_title">Luminosità AOD &amp; Display Ambient</string>
     <string name="doze_brightness_summary">Imposta il livello di luminosità dello schermo per Always On Display e Display Ambient</string>
     <string name="lock_screen_custom_clock_gradient_title">Sfumatura stile orologio schermata di blocco</string>

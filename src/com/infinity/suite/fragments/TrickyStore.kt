@@ -458,7 +458,7 @@ class TrickyStore : SettingsPreferenceFragment() {
         private val KEYBOX_DOWNLOAD_URL: String by lazy {
         String(
         Base64.decode(
-            "aHR0cHM6Ly9naXQuZXZvbHV0aW9uLXgub3JnL0V2b1gva2V5Ym94L3Jhdy9icmFuY2gvbWFpbi9rZXlib3gueG1s",
+            "aHR0cHM6Ly9naXRlYS5jb20vRXZvbHV0aW9uLVgva2V5Ym94L3Jhdy9icmFuY2gvbWFpbi9rZXlib3gueG1s",
             Base64.DEFAULT
         )
     )

@@ -453,6 +453,8 @@
     <string name="doze_peek_title">Vistazo AOD</string>
     <string name="doze_peek_summary">Mostrar la pantalla ambiental brevemente cuando la pantalla se apaga</string>
     <string name="doze_peek_duration_title">Duración del vistazo</string>
+    <string name="custom_doze_brightness_title">Brillo personalizado de AOD y pantalla ambiente</string>
+    <string name="custom_doze_brightness_summary">Habilitar nivel de brillo personalizado para Always On Display y pantalla ambiente</string>
     <string name="doze_brightness_title">Brillo de AOD y pantalla ambiente</string>
     <string name="doze_brightness_summary">Ajustar el nivel de brillo de la pantalla para Always On Display y pantalla ambiente</string>
     <string name="lock_screen_custom_clock_gradient_title">Gradiente de estilo de reloj de la pantalla de bloqueo</string>

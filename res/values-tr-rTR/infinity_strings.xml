@@ -453,6 +453,8 @@
     <string name="doze_peek_title">AOD Göz Atma</string>
     <string name="doze_peek_summary">Ekran kapandığında ortam ekranını kısaca göster</string>
     <string name="doze_peek_duration_title">Göz atma süresi</string>
+    <string name="custom_doze_brightness_title">Özel AOD ve Ortam ekranı parlaklığı</string>
+    <string name="custom_doze_brightness_summary">Her Zaman Açık Ekran ve Ortam ekranı için özel ekran parlaklık seviyesini etkinleştirin</string>
     <string name="doze_brightness_title">AOD ve Ortam ekranı parlaklığı</string>
     <string name="doze_brightness_summary">Her Zaman Açık Ekran ve Ortam ekranı için ekran parlaklık seviyesini ayarlayın</string>
     <string name="lock_screen_custom_clock_gradient_title">Kilit ekranı saat stili gradyanı</string>

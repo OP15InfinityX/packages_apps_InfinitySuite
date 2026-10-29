@@ -453,6 +453,8 @@
     <string name="doze_peek_title">Visualização Rápida AOD</string>
     <string name="doze_peek_summary">Mostrar a tela ambiente brevemente quando a tela for desligada</string>
     <string name="doze_peek_duration_title">Duração da visualização</string>
+    <string name="custom_doze_brightness_title">Brilho personalizado do AOD e tela ambiente</string>
+    <string name="custom_doze_brightness_summary">Ativar nível de brilho personalizado para Always On Display e Tela ambiente</string>
     <string name="doze_brightness_title">Brilho do AOD e tela ambiente</string>
     <string name="doze_brightness_summary">Definir o nível de brilho da tela para Always On Display e Tela ambiente</string>
     <string name="lock_screen_custom_clock_gradient_title">Gradiente do estilo de relógio da tela de bloqueio</string>

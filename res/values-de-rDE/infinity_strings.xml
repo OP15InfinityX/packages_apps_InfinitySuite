@@ -453,6 +453,8 @@
     <string name="doze_peek_title">AOD-Vorschau</string>
     <string name="doze_peek_summary">Zeige das Ambient Display kurz an, wenn der Bildschirm ausgeschaltet wird</string>
     <string name="doze_peek_duration_title">Dauer der Vorschau</string>
+    <string name="custom_doze_brightness_title">Benutzerdefinierte AOD- &amp; Inaktivitätsdisplay-Helligkeit</string>
+    <string name="custom_doze_brightness_summary">Benutzerdefinierte Bildschirmhelligkeit für Always On Display und Inaktivitätsdisplay aktivieren</string>
     <string name="doze_brightness_title">AOD- &amp; Inaktivitätsdisplay-Helligkeit</string>
     <string name="doze_brightness_summary">Bildschirmhelligkeit für Always On Display und Inaktivitätsdisplay festlegen</string>
     <string name="lock_screen_custom_clock_gradient_title">Sperrbildschirm-Uhrzeitstil Verlauf</string>

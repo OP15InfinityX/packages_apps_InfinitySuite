@@ -453,6 +453,8 @@
     <string name="doze_peek_title">AOD 窺視</string>
     <string name="doze_peek_summary">在螢幕關閉時短暫顯示待機顯示畫面</string>
     <string name="doze_peek_duration_title">窺視持續時間</string>
+    <string name="custom_doze_brightness_title">自訂 AOD 與環境顯示亮度</string>
+    <string name="custom_doze_brightness_summary">啟用微光顯示與環境顯示的自訂螢幕亮度等級</string>
     <string name="doze_brightness_title">AOD 與環境顯示亮度</string>
     <string name="doze_brightness_summary">設定微光顯示與環境顯示的螢幕亮度等級</string>
     <string name="lock_screen_custom_clock_gradient_title">鎖定螢幕時鐘樣式漸層</string>

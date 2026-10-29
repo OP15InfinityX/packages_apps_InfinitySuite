@@ -16,28 +16,22 @@
 
 package com.infinity.suite
 
-import android.animation.AnimatorInflater
-import android.animation.ObjectAnimator
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.os.Bundle
-import android.view.animation.AnimationUtils
-import android.view.animation.Interpolator
 import android.view.LayoutInflater
 import android.view.Surface
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.android.internal.logging.nano.MetricsProto
 import com.android.internal.util.infinity.Utils
 import com.android.settings.R
 import com.android.settings.SettingsPreferenceFragment
-import com.google.android.material.card.MaterialCardView
 import com.android.settings.WallpaperBlurView
+import com.android.settings.core.SubSettingLauncher
+import com.google.android.material.card.MaterialCardView
 
 import com.infinity.suite.fragments.QuickSettings
 import com.infinity.suite.fragments.MonetSettings
@@ -91,59 +85,31 @@ class InfinitySuite : SettingsPreferenceFragment(), View.OnClickListener {
     }
 
     override fun onClick(view: View) {
-        val fragment = when (view.id) {
-            R.id.quicksettings_card -> QuickSettings()
-            R.id.monetsettings_card -> MonetSettings()
-            R.id.statusbarsettings_card -> StatusBarSettings()
-            R.id.lockscreensettings_card -> LockScreenSettings()
-            R.id.powersettings_card -> PowerMenuSettings()
-            R.id.teaminfo_card -> TeamInfo()
-            R.id.notificationsettings_card -> NotificationSettings()
-            R.id.theme_card -> ThemesSettings()
-            R.id.navigationsettings_card -> NavbarSettings()
-            R.id.miscsettings_card -> MiscSettings()
-            R.id.buttonsettings_card -> ButtonSettings()
-            R.id.aodsettings_card -> AmbientCustomizations()
+        val (fragmentClass, titleRes) = when (view.id) {
+            R.id.quicksettings_card -> QuickSettings::class.java.name to R.string.quicksettings_title
+            R.id.monetsettings_card -> MonetSettings::class.java.name to R.string.monet_title
+            R.id.statusbarsettings_card -> StatusBarSettings::class.java.name to R.string.statusbar_title
+            R.id.lockscreensettings_card -> LockScreenSettings::class.java.name to R.string.lockscreen_title
+            R.id.powersettings_card -> PowerMenuSettings::class.java.name to R.string.powermenu_title
+            R.id.teaminfo_card -> TeamInfo::class.java.name to R.string.team_title
+            R.id.notificationsettings_card -> NotificationSettings::class.java.name to R.string.notifications_title
+            R.id.theme_card -> ThemesSettings::class.java.name to R.string.themes_title
+            R.id.navigationsettings_card -> NavbarSettings::class.java.name to R.string.navbar_title
+            R.id.miscsettings_card -> MiscSettings::class.java.name to R.string.misc_title
+            R.id.buttonsettings_card -> ButtonSettings::class.java.name to R.string.button_title
+            R.id.aodsettings_card -> AmbientCustomizations::class.java.name to R.string.ambient_text_category_title
             R.id.customization_picker_button -> {
                 openCustomizationPickerActivity()
                 return
             }
             else -> null
-        }
+        } ?: return
 
-        val title = when (view.id) {
-            R.id.quicksettings_card -> getString(R.string.quicksettings_title)
-            R.id.monetsettings_card -> getString(R.string.monet_title)
-            R.id.statusbarsettings_card -> getString(R.string.statusbar_title)
-            R.id.lockscreensettings_card -> getString(R.string.lockscreen_title)
-            R.id.powersettings_card -> getString(R.string.powermenu_title)
-            R.id.teaminfo_card -> getString(R.string.team_title)
-            R.id.notificationsettings_card -> getString(R.string.notifications_title)
-            R.id.theme_card -> getString(R.string.themes_title)
-            R.id.navigationsettings_card -> getString(R.string.navbar_title)
-            R.id.miscsettings_card -> getString(R.string.misc_title)
-            R.id.buttonsettings_card -> getString(R.string.button_title)
-            R.id.aodsettings_card -> getString(R.string.ambient_text_category_title)
-            else -> null
-        }
-
-        if (fragment != null && title != null) {
-            replaceFragmentWithSystemAnimations(fragment, title)
-        }
-    }
-
-    private fun replaceFragmentWithSystemAnimations(fragment: Fragment, title: String) {
-        val transaction = parentFragmentManager.beginTransaction()
-        
-        transaction.setCustomAnimations(
-	    R.anim.fragment_slide_in,
-	    R.anim.fragment_slide_out
-        )
-        transaction.replace(this.id, fragment)
-        transaction.addToBackStack(null)
-        transaction.commitAllowingStateLoss()
-
-        activity?.title = title
+        SubSettingLauncher(requireContext())
+            .setDestination(fragmentClass)
+            .setTitleRes(titleRes)
+            .setSourceMetricsCategory(metricsCategory)
+            .launch()
     }
 
     override fun getMetricsCategory(): Int {

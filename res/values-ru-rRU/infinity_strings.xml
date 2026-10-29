@@ -453,6 +453,8 @@
     <string name="doze_peek_title">AOD Peek</string>
     <string name="doze_peek_summary">Показывать Ambient дисплей на короткое время при выключении экрана</string>
     <string name="doze_peek_duration_title">Длительность Peek</string>
+    <string name="custom_doze_brightness_title">Пользовательская яркость AOD и индикации</string>
+    <string name="custom_doze_brightness_summary">Включить пользовательский уровень яркости экрана для Always On Display и индикации</string>
     <string name="doze_brightness_title">Яркость AOD и индикации</string>
     <string name="doze_brightness_summary">Укажите уровень яркости экрана для Always On Display и индикации</string>
     <string name="lock_screen_custom_clock_gradient_title">Градиент стиля пользовательских часов экрана блокировки</string>

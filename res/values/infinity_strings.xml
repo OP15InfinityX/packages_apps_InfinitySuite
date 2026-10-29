@@ -602,6 +602,8 @@
     <string name="doze_peek_duration_title">Peek duration</string>
 
     <!-- Doze brightness -->
+    <string name="custom_doze_brightness_title">Custom AOD &amp; Ambient display brightness</string>
+    <string name="custom_doze_brightness_summary">Enable custom brightness level for Always On Display and Ambient display</string>
     <string name="doze_brightness_title">AOD &amp; Ambient display brightness</string>
     <string name="doze_brightness_summary">Set screen brightness level for Always On Display and Ambient display</string>
 

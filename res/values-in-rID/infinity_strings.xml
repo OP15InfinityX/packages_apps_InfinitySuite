@@ -453,6 +453,8 @@
     <string name="doze_peek_title">AOD Peek</string>
     <string name="doze_peek_summary">Tampilkan tampilan ambient sebentar saat layar mati</string>
     <string name="doze_peek_duration_title">Durasi Peek</string>
+    <string name="custom_doze_brightness_title">Kecerahan khusus AOD &amp; Tampilan ambient</string>
+    <string name="custom_doze_brightness_summary">Aktifkan tingkat kecerahan khusus untuk Always On Display dan Tampilan ambient</string>
     <string name="doze_brightness_title">Kecerahan AOD &amp; Tampilan ambient</string>
     <string name="doze_brightness_summary">Atur tingkat kecerahan layar untuk Always On Display dan Tampilan ambient</string>
     <string name="lock_screen_custom_clock_gradient_title">Gradien gaya jam layar kunci</string>

@@ -453,6 +453,8 @@
     <string name="doze_peek_title">Podgląd AOD</string>
     <string name="doze_peek_summary">Pokaż krótko wyświetlacz czuwający po wyłączeniu ekranu</string>
     <string name="doze_peek_duration_title">Czas podglądu</string>
+    <string name="custom_doze_brightness_title">Własna jasność AOD i ekranu dostosowanego</string>
+    <string name="custom_doze_brightness_summary">Włącz własny poziom jasności ekranu dla Always On Display i ekranu dostosowanego</string>
     <string name="doze_brightness_title">Jasność AOD i ekranu dostosowanego</string>
     <string name="doze_brightness_summary">Ustaw poziom jasności ekranu dla Always On Display i ekranu dostosowanego</string>
     <string name="lock_screen_custom_clock_gradient_title">Gradient stylu zegara na ekranie blokady</string>
