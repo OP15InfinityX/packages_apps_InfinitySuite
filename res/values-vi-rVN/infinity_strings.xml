@@ -468,6 +468,10 @@
     <string name="status_bar_dynamic_island_summary">Mang các hoạt động trực tiếp, điều khiển và cập nhật đến vị trí cutout camera</string>
     <string name="dynamic_island_width_title">Chiều rộng Dynamic Island</string>
     <string name="dynamic_island_width_summary">Điều chỉnh chiều dài ngang của chip Dynamic Island</string>
+    <string name="dynamic_island_x_title">Vị trí ngang Dynamic Island</string>
+    <string name="dynamic_island_x_summary">Điều chỉnh chip sang trái hoặc phải từ vị trí cutout camera</string>
+    <string name="dynamic_island_y_title">Vị trí dọc Dynamic Island</string>
+    <string name="dynamic_island_y_summary">Điều chỉnh chip lên hoặc xuống từ vị trí cutout camera</string>
     <string name="dynamic_island_footer_title">Giới thiệu về Dynamic Island</string>
     <string name="dynamic_island_intro">✨ Dynamic Island mang các hoạt động đang diễn ra của bạn đến gần vị trí cutout camera.\n🎵 Điều khiển nhạc của bạn\n⏺️ Theo dõi quá trình quay màn hình\n🔦 Điều khiển đèn pin\n🏆 Theo dõi tỷ số thể thao trực tiếp\n🎤 Thưởng thức lời bài hát được đồng bộ\n🚀 Mọi thứ đều nằm ngay trên cùng màn hình của bạn, sẵn sàng khi bạn cần mà không gây cản trở.</string>
     <string name="dynamic_island_features_title">Tính năng</string>

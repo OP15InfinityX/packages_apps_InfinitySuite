@@ -468,6 +468,10 @@
     <string name="status_bar_dynamic_island_summary">Hadirkan aktivitas langsung, kontrol, dan pembaruan ke potongan kamera</string>
     <string name="dynamic_island_width_title">Lebar Dynamic Island</string>
     <string name="dynamic_island_width_summary">Ubah panjang horizontal chip Dynamic Island</string>
+    <string name="dynamic_island_x_title">Posisi horizontal Dynamic Island</string>
+    <string name="dynamic_island_x_summary">Sesuaikan chip ke kiri atau kanan dari potongan kamera</string>
+    <string name="dynamic_island_y_title">Posisi vertikal Dynamic Island</string>
+    <string name="dynamic_island_y_summary">Sesuaikan chip ke atas atau bawah dari potongan kamera</string>
     <string name="dynamic_island_footer_title">Tentang Dynamic Island</string>
     <string name="dynamic_island_intro">✨ Dynamic Island menghadirkan aktivitas berkelanjutan Anda di sekitar potongan kamera.\n🎵 Kontrol musik Anda\n⏺️ Pantau rekaman layar\n🔦 Kontrol senter Anda\n🏆 Ikuti skor langsung\n🎤 Nikmati lirik yang disinkronkan\n🚀 Semuanya tetap di bagian atas layar Anda, siap saat Anda membutuhkannya tanpa menghalangi.</string>
     <string name="dynamic_island_features_title">Fitur</string>

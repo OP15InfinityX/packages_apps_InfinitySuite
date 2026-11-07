@@ -629,6 +629,10 @@
     <string name="dynamic_island_height_summary">Adjust the height of the compact island</string>
     <string name="dynamic_island_vertical_offset_title">Vertical position</string>
     <string name="dynamic_island_vertical_offset_summary">Move the island slightly up or down around the camera cutout</string>
+    <string name="dynamic_island_x_title">Dynamic Island horizontal position</string>
+    <string name="dynamic_island_x_summary">Adjust the chip left or right from the camera cutout</string>
+    <string name="dynamic_island_y_title">Dynamic Island vertical position</string>
+    <string name="dynamic_island_y_summary">Adjust the chip up or down from the camera cutout</string>
     <string name="dynamic_island_footer_title">About Dynamic Island</string>
     <string name="dynamic_island_intro">✨ Dynamic Island brings your ongoing activities to life around the camera cutout.\n🎵 Control your music\n⏺️ Keep track of screen recordings\n🔦 Control your flashlight\n🏆 Follow live scores\n🎤 Enjoy synced lyrics\n🚀 Everything stays right at the top of your screen, ready when you need it without getting in your way.</string>
     <string name="dynamic_island_features_title">Features</string>

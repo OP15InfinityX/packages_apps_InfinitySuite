@@ -468,6 +468,10 @@
     <string name="status_bar_dynamic_island_summary">Porta attività live, controlli e aggiornamenti al ritaglio della fotocamera</string>
     <string name="dynamic_island_width_title">Larghezza Dynamic Island</string>
     <string name="dynamic_island_width_summary">Modifica la lunghezza orizzontale del chip Dynamic Island</string>
+    <string name="dynamic_island_x_title">Posizione orizzontale Dynamic Island</string>
+    <string name="dynamic_island_x_summary">Regola il chip a sinistra o a destra dal ritaglio della fotocamera</string>
+    <string name="dynamic_island_y_title">Posizione verticale Dynamic Island</string>
+    <string name="dynamic_island_y_summary">Regola il chip in alto o in basso dal ritaglio della fotocamera</string>
     <string name="dynamic_island_footer_title">Informazioni su Dynamic Island</string>
     <string name="dynamic_island_intro">✨ Dynamic Island dà vita alle tue attività in corso attorno al ritaglio della fotocamera.\n🎵 Controlla la tua musica\n⏺️ Tieni traccia delle registrazioni dello schermo\n🔦 Controlla la torcia\n🏆 Segui i punteggi live\n🎤 Goditi i testi sincronizzati\n🚀 Tutto rimane in cima allo schermo, pronto quando ne hai bisogno senza intralciarti.</string>
     <string name="dynamic_island_features_title">Funzionalità</string>

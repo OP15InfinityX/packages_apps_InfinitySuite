@@ -468,6 +468,10 @@
     <string name="status_bar_dynamic_island_summary">Выводить живые активности, элементы управления и обновления к вырезу камеры</string>
     <string name="dynamic_island_width_title">Ширина Dynamic Island</string>
     <string name="dynamic_island_width_summary">Изменить горизонтальную длину чипа Dynamic Island</string>
+    <string name="dynamic_island_x_title">Горизонтальное положение Dynamic Island</string>
+    <string name="dynamic_island_x_summary">Отрегулируйте чип влево или вправо от выреза камеры</string>
+    <string name="dynamic_island_y_title">Вертикальное положение Dynamic Island</string>
+    <string name="dynamic_island_y_summary">Отрегулируйте чип вверх или вниз от выреза камеры</string>
     <string name="dynamic_island_footer_title">О Dynamic Island</string>
     <string name="dynamic_island_intro">✨ Dynamic Island оживляет ваши текущие активности вокруг выреза камеры.\n🎵 Управляйте своей музыкой\n⏺️ Отслеживайте запись экрана\n🔦 Управляйте фонариком\n🏆 Следите за результатами в реальном времени\n🎤 Наслаждайтесь синхронизированными текстами песен\n🚀 Все остается в верхней части экрана, готовое к использованию, когда вам нужно, не мешая.</string>
     <string name="dynamic_island_features_title">Функции</string>

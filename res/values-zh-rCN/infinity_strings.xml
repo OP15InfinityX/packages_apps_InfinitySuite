@@ -468,6 +468,10 @@
     <string name="status_bar_dynamic_island_summary">将实时活动、控制和更新带到相机挖孔处</string>
     <string name="dynamic_island_width_title">Dynamic Island 宽度</string>
     <string name="dynamic_island_width_summary">修改 Dynamic Island 芯片的水平长度</string>
+    <string name="dynamic_island_x_title">Dynamic Island 水平位置</string>
+    <string name="dynamic_island_x_summary">根据相机挖孔调整芯片向左或向右</string>
+    <string name="dynamic_island_y_title">Dynamic Island 垂直位置</string>
+    <string name="dynamic_island_y_summary">根据相机挖孔调整芯片向上或向下</string>
     <string name="dynamic_island_footer_title">关于 Dynamic Island</string>
     <string name="dynamic_island_intro">✨ Dynamic Island 让您的进行中活动在相机挖孔周围生动呈现。\n🎵 控制您的音乐\n⏺️ 追踪屏幕录制\n🔦 控制手电筒\n🏆 关注实时比分\n🎤 欣赏同步歌词\n🚀 一切始终保持在屏幕顶部，在您需要时随时可用，不会妨碍您的操作。</string>
     <string name="dynamic_island_features_title">功能</string>

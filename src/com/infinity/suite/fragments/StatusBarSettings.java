@@ -73,7 +73,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private static final String STATUS_BAR_CARRIER_KEY = "status_bar_carrier_key";
     private static final String CARRIER_NAME = "lockscreen_show_carrier";
     private static final String CUSTOM_CARRIER_LABEL = "lockscreen_show_custom_carrier_text";
-    private static final String STATUS_BAR_DYNAMIC_ISLAND = "status_bar_dynamic_island";
     private static final String STATUS_BAR_BURN_IN_PROTECTION = "status_bar_burn_in_protection";
 
     private static final int PULLDOWN_DIR_NONE = 0;
@@ -142,11 +141,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         } else {
             mCustomCarrierTextPref = findPreference(CUSTOM_CARRIER_LABEL);
             updateCustomCarrierTextSummary();
-        }
-
-        Preference dynamicIsland = findPreference(STATUS_BAR_DYNAMIC_ISLAND);
-        if (dynamicIsland != null && !DeviceUtils.hasCenteredCutout(mContext)) {
-            prefScreen.removePreference(dynamicIsland);
         }
 
         mLogoColor = (SystemSettingListPreference) findPreference(LOGO_COLOR);
@@ -382,9 +376,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                     if (!TelephonyUtils.isVoiceCapable(context)) {
                         keys.add(CARRIER_NAME);
                         keys.add(CUSTOM_CARRIER_LABEL);
-                    }
-                    if (!DeviceUtils.hasCenteredCutout(context)) {
-                        keys.add(STATUS_BAR_DYNAMIC_ISLAND);
                     }
                     return keys;
                 }

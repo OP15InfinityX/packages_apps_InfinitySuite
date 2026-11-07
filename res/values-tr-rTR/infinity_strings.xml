@@ -468,6 +468,10 @@
     <string name="status_bar_dynamic_island_summary">Canlı etkinlikleri, kontrolleri ve güncellemeleri kamera kesiğine getir</string>
     <string name="dynamic_island_width_title">Dynamic Island genişliği</string>
     <string name="dynamic_island_width_summary">Dynamic Island çipinin yatay uzunluğunu değiştir</string>
+    <string name="dynamic_island_x_title">Dynamic Island yatay konumu</string>
+    <string name="dynamic_island_x_summary">Çipi kamera kesiğinden sola veya sağa ayarla</string>
+    <string name="dynamic_island_y_title">Dynamic Island dikey konumu</string>
+    <string name="dynamic_island_y_summary">Çipi kamera kesiğinden yukarı veya aşağı ayarla</string>
     <string name="dynamic_island_footer_title">Dynamic Island Hakkında</string>
     <string name="dynamic_island_intro">✨ Dynamic Island, devam eden etkinliklerini kamera kesiği etrafında canlandırır.\n🎵 Müziğini kontrol et\n⏺️ Ekran kayıtlarını takip et\n🔦 El fenerini kontrol et\n🏆 Canlı skorları takip et\n🎤 Senkronize şarkı sözlerinin keyfini çıkar\n🚀 Her şey ekranının en üstünde, ihtiyacın olduğunda hazır, yoluna çıkmadan.</string>
     <string name="dynamic_island_features_title">Özellikler</string>

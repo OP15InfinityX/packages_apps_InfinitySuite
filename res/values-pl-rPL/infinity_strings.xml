@@ -468,6 +468,10 @@
     <string name="status_bar_dynamic_island_summary">Przenieś aktywności na żywo, elementy sterujące i aktualizacje do wycięcia na aparat</string>
     <string name="dynamic_island_width_title">Szerokość Dynamic Island</string>
     <string name="dynamic_island_width_summary">Zmodyfikuj poziomą długość układu scalonego Dynamic Island</string>
+    <string name="dynamic_island_x_title">Pozioma pozycja Dynamic Island</string>
+    <string name="dynamic_island_x_summary">Dostosuj układ w lewo lub w prawo od wycięcia na aparat</string>
+    <string name="dynamic_island_y_title">Pionowa pozycja Dynamic Island</string>
+    <string name="dynamic_island_y_summary">Dostosuj układ w górę lub w dół od wycięcia na aparat</string>
     <string name="dynamic_island_footer_title">O Dynamic Island</string>
     <string name="dynamic_island_intro">✨ Dynamic Island ożywia Twoje bieżące aktywności wokół wycięcia na aparat.\n🎵 Kontroluj swoją muzykę\n⏺️ Śledź nagrywanie ekranu\n🔦 Kontroluj latarkę\n🏆 Śledź wyniki na żywo\n🎤 Ciesz się zsynchronizowanymi tekstami piosenek\n🚀 Wszystko pozostaje na górze ekranu, gotowe, gdy ich potrzebujesz, nie przeszkadzając Ci.</string>
     <string name="dynamic_island_features_title">Funkcje</string>

@@ -468,6 +468,10 @@
     <string name="status_bar_dynamic_island_summary">Lleva actividades en vivo, controles y actualizaciones al recorte de la cámara</string>
     <string name="dynamic_island_width_title">Ancho de Dynamic Island</string>
     <string name="dynamic_island_width_summary">Modificar la longitud horizontal del chip de Dynamic Island</string>
+    <string name="dynamic_island_x_title">Posición horizontal de Dynamic Island</string>
+    <string name="dynamic_island_x_summary">Ajustar el chip a la izquierda o derecha desde el recorte de la cámara</string>
+    <string name="dynamic_island_y_title">Posición vertical de Dynamic Island</string>
+    <string name="dynamic_island_y_summary">Ajustar el chip hacia arriba o abajo desde el recorte de la cámara</string>
     <string name="dynamic_island_footer_title">Acerca de Dynamic Island</string>
     <string name="dynamic_island_intro">✨ Dynamic Island da vida a tus actividades en curso alrededor del recorte de la cámara.\n🎵 Controla tu música\n⏺️ Realiza un seguimiento de las grabaciones de pantalla\n🔦 Controla tu linterna\n🏆 Sigue puntuaciones en vivo\n🎤 Disfruta de letras sincronizadas\n🚀 Todo permanece en la parte superior de tu pantalla, listo cuando lo necesites sin interponerse en tu camino.</string>
     <string name="dynamic_island_features_title">Funciones</string>
