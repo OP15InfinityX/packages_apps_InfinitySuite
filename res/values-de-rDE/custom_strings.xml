@@ -1070,4 +1070,8 @@
     <string name="reading_engine_mode_title">Komfortanzeige (Lesemodus)</string>
     <string name="display_engine_default">Standard</string>
     <string name="display_engine_mode_footer_text">Inspiriert von Sony\'s Bravia/X-Reality engine, hat die Display engine den gesättigten Modus für verbesserte Helligkeit und Sättigung, den X-Reality Modus für verbesserte Details und Farbwiedergabe und den Triluminous Modus für ein breiteres Farbspektrum. </string>
+    <!-- Lockscreen status bar -->
+    <string name="lockscreen_hide_status_bar_title">Statusleiste ausblenden</string>
+    <string name="lockscreen_hide_status_bar_summary">Blendet die Statusleiste auf dem Sperrbildschirm aus. Benachrichtigungsleiste und Schnelleinstellungen bleiben verfügbar.</string>
+
 </resources>

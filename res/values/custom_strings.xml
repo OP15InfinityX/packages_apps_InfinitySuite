@@ -1516,4 +1516,8 @@
     <string name="battery_saver_dark_theme_summary">Dark theme turns on and stays on while Battery Saver is on. Saves the most battery on OLED screens.</string>
     <!-- Not shown in the UI; describes the preference for the settings API -->
     <string name="battery_saver_dark_theme_purpose">Controls whether Battery Saver turns on dark theme and prevents changing it until Battery Saver turns off.</string>
+    <!-- Lockscreen status bar -->
+    <string name="lockscreen_hide_status_bar_title">Hide status bar</string>
+    <string name="lockscreen_hide_status_bar_summary">Hide the status bar on the lockscreen. The notification shade and Quick Settings remain available.</string>
+
 </resources>
