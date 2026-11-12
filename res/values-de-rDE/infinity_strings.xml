@@ -497,4 +497,6 @@
     <string name="infinity_bar_lockscreen_media_summary">Ersetze den standardmäßigen Sperrbildschirm-Media Player durch einen kompakten Samsung NowBar-ähnlichen Player</string>
     <string name="infinity_bar_lockscreen_media_lyrics_title">Musiktexte auf dem Sperrbildschirm anzeigen</string>
     <string name="infinity_bar_lockscreen_media_lyrics_summary">Zeige Texte von unterstützter, abgespielter Musik auf dem Sperrbildschirm und AOD an, wenn verfügbar</string>
+    <string name="aod_media_controls_title">AOD-Mediensteuerung (Beta)</string>
+    <string name="aod_media_controls_summary">Zeigt Titel, Interpret und Medientasten auf dem Always-on-Display. Hält den Touchscreen aktiv und kann den Akkuverbrauch erhöhen. Nach 20 Minuten Pause oder ohne Mediensitzung wird normales AOD verwendet.</string>
 </resources>

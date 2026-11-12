@@ -36,6 +36,13 @@
         android:dependency="doze_always_on" />
 
     <com.infinity.support.preferences.SecureSettingSwitchPreference
+        android:key="aod_media_controls"
+        android:title="@string/aod_media_controls_title"
+        android:summary="@string/aod_media_controls_summary"
+        android:defaultValue="false"
+        android:dependency="doze_always_on" />
+
+    <com.infinity.support.preferences.SecureSettingSwitchPreference
         android:key="doze_on_charge"
         android:title="@string/doze_on_charge_title"
         android:summary="@string/doze_on_charge_summary" />

@@ -1520,4 +1520,6 @@
     <string name="lockscreen_hide_status_bar_title">Hide status bar</string>
     <string name="lockscreen_hide_status_bar_summary">Hide the status bar on the lockscreen. The notification shade and Quick Settings remain available.</string>
 
+    <string name="aod_media_controls_title">AOD media controls (Beta)</string>
+    <string name="aod_media_controls_summary">Show track information and controls on the always-on display. Keeps the touchscreen active and may increase battery use. Returns to normal AOD after 20 minutes paused or when no media session is available.</string>
 </resources>
