@@ -344,9 +344,7 @@ class TrickyStore : SettingsPreferenceFragment() {
             result.fold(
                 onSuccess = { newReport ->
                     // A failed network check must not erase a known bad verdict.
-                    val keep = newReport.status == KeyboxInspector.Status.UNVERIFIED &&
-                        previous != null && previous.isBad()
-                    if (!keep) {
+                    if (KeyboxInspector.resolve(report, newReport) === newReport) {
                         KeyboxInspector.saveReport(appContext, hash, newReport)
                         report = newReport
                     }
@@ -370,7 +368,7 @@ class TrickyStore : SettingsPreferenceFragment() {
         previous: KeyboxInspector.Status?,
         userInitiated: Boolean,
     ) {
-        val flagged = status != null && status.isBad() && (userInitiated || status != previous)
+        val flagged = status != null && status.isBad && (userInitiated || status != previous)
         when {
             flagged && ui.dialog == null -> showFlaggedDialog(status!!)
             offerWipeAfterCheck && ui.dialog == null -> {
@@ -400,11 +398,6 @@ class TrickyStore : SettingsPreferenceFragment() {
             else -> return
         }
         ui.dialog = TsDialog.Flagged(getString(title), message)
-    }
-
-    private fun KeyboxInspector.Status.isBad(): Boolean = when (this) {
-        KeyboxInspector.Status.VALID, KeyboxInspector.Status.UNVERIFIED -> false
-        else -> true
     }
 
     // ---- UI refresh ------------------------------------------------------------------------

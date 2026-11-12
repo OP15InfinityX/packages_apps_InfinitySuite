@@ -23,6 +23,7 @@ import com.android.settingslib.spa.framework.theme.SettingsTheme
 import com.infinity.suite.fragments.PifFetcher.PifChannel
 import com.infinity.suite.fragments.PifFetcher.PifDevice
 import com.infinity.suite.fragments.PifFetcher.PifFetchResult
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -288,8 +289,10 @@ class PlayIntegrityFix : SettingsPreferenceFragment() {
                         ui.dialog = PifDialog.DevicePicker(list.devices.map { it.model }, current)
                     }
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                toast(getString(R.string.pif_failed, e.message ?: ""))
+                if (isAdded) toast(getString(R.string.pif_failed, e.message ?: ""))
             } finally {
                 ui.fetching = false
                 ui.fetchStatus = null
@@ -326,8 +329,10 @@ class PlayIntegrityFix : SettingsPreferenceFragment() {
                     }
                     is PifFetchResult.Error -> toast(getString(R.string.pif_failed, result.message))
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                toast(getString(R.string.pif_failed, e.message ?: ""))
+                if (isAdded) toast(getString(R.string.pif_failed, e.message ?: ""))
             } finally {
                 ui.fetching = false
                 ui.fetchStatus = null
@@ -336,7 +341,8 @@ class PlayIntegrityFix : SettingsPreferenceFragment() {
     }
 
     private fun toast(msg: String) {
-        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
+        val ctx = context ?: return
+        Toast.makeText(ctx, msg, Toast.LENGTH_SHORT).show()
     }
 
     companion object {
